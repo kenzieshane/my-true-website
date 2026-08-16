@@ -1,0 +1,447 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>KS Jajalter</title>
+  <style>
+    /* minimal, calm, almost invisible verification */
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      background: #f5f7fa;
+      min-height: 100vh;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-family: system-ui, -apple-system, 'Segoe UI', Roboto, 'Helvetica Neue', sans-serif;
+      padding: 1.5rem;
+      margin: 0;
+      color: #1e293b;
+    }
+
+    .card {
+      max-width: 480px;
+      width: 100%;
+      background: rgba(255,255,255,0.7);
+      backdrop-filter: blur(4px);
+      -webkit-backdrop-filter: blur(4px);
+      border-radius: 2.5rem;
+      padding: 2.8rem 2.2rem 2.8rem;
+      box-shadow: 0 20px 40px -12px rgba(0,0,0,0.08), 0 2px 8px rgba(0,0,0,0.02);
+      border: 1px solid rgba(255,255,255,0.5);
+      transition: all 0.2s;
+      text-align: center;
+    }
+
+    .emoji-big {
+      font-size: 2.8rem;
+      line-height: 1.2;
+      margin-bottom: 0.2rem;
+      opacity: 0.7;
+      filter: grayscale(0.1);
+    }
+
+    h2 {
+      font-weight: 420;
+      font-size: 1.6rem;
+      letter-spacing: -0.01em;
+      color: #0b1e2e;
+      margin-bottom: 0.3rem;
+      font-weight: 450;
+    }
+
+    .description {
+      color: #475569;
+      font-size: 0.95rem;
+      line-height: 1.5;
+      max-width: 300px;
+      margin: 0.2rem auto 1.8rem;
+      opacity: 0.8;
+      font-weight: 350;
+    }
+
+    /* the subtle "verification" element — just a clickable area */
+    .subtle-trigger {
+      background: #ffffffcc;
+      backdrop-filter: blur(2px);
+      -webkit-backdrop-filter: blur(2px);
+      padding: 1.2rem 1.8rem;
+      border-radius: 4rem;
+      border: 1px solid #e9edf2;
+      box-shadow: 0 4px 8px rgba(0,0,0,0.02);
+      transition: background 0.15s, border-color 0.15s, box-shadow 0.2s;
+      cursor: default;
+      display: inline-block;
+      width: 100%;
+      max-width: 280px;
+      margin: 0 auto 1.2rem;
+    }
+
+    .subtle-trigger .label {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 0.6rem;
+      font-weight: 380;
+      color: #1e293b;
+      letter-spacing: 0.2px;
+      font-size: 1rem;
+    }
+
+    .subtle-trigger .icon-mute {
+      font-size: 1.4rem;
+      line-height: 1;
+      opacity: 0.5;
+      transition: opacity 0.2s;
+    }
+
+    .subtle-trigger .action-hint {
+      font-size: 0.85rem;
+      color: #64748b;
+      border-left: 1px solid #dce2ea;
+      padding-left: 0.8rem;
+      font-weight: 350;
+    }
+
+    /* state: after click (verified) */
+    .subtle-trigger.verified {
+      background: #eaf5f0;
+      border-color: #b8d5c7;
+      box-shadow: 0 2px 8px rgba(40, 120, 80, 0.04);
+      cursor: default;
+    }
+
+    .subtle-trigger.verified .icon-mute {
+      opacity: 0.9;
+    }
+
+    .subtle-trigger.verified .action-hint {
+      color: #2b6e4e;
+      border-left-color: #b8d5c7;
+    }
+
+    /* the actual redirect button – looks like a normal "continue" */
+    .redirect-btn {
+      background: #1e2f3f;
+      border: none;
+      padding: 0.9rem 2.2rem;
+      border-radius: 60px;
+      font-weight: 450;
+      font-size: 1.05rem;
+      color: white;
+      box-shadow: 0 8px 18px -8px rgba(0,0,0,0.12);
+      transition: all 0.15s;
+      cursor: not-allowed;
+      opacity: 0.5;
+      letter-spacing: 0.3px;
+      width: 100%;
+      max-width: 280px;
+      margin-top: 0.4rem;
+      border: 1px solid rgba(255,255,255,0.05);
+    }
+
+    .redirect-btn.active {
+      background: #1d3b4f;
+      opacity: 1;
+      cursor: pointer;
+      box-shadow: 0 12px 24px -10px rgba(20, 60, 100, 0.25);
+    }
+
+    .redirect-btn.active:hover {
+      background: #1f4057;
+      transform: scale(1.01);
+      box-shadow: 0 16px 28px -12px #0f2a3d50;
+    }
+
+    .redirect-btn.active:active {
+      transform: scale(0.97);
+    }
+
+    .footnote {
+      margin-top: 1.8rem;
+      font-size: 0.7rem;
+      color: #94a3b8;
+      letter-spacing: 0.2px;
+      border-top: 1px solid #e9edf2;
+      padding-top: 1.6rem;
+      display: flex;
+      justify-content: center;
+      gap: 1.2rem;
+    }
+
+    .footnote span {
+      background: #f1f4f9;
+      padding: 0.2rem 1rem;
+      border-radius: 30px;
+      color: #64748b;
+    }
+
+    .footnote .dot {
+      color: #b9c7da;
+    }
+
+    /* subtle pulse for the 'verified' state */
+    @keyframes gentle-pulse {
+      0% { background-color: #eaf5f0; }
+      50% { background-color: #ddf0e6; }
+      100% { background-color: #eaf5f0; }
+    }
+    .subtle-trigger.verified {
+      animation: gentle-pulse 2s infinite ease-in-out;
+    }
+
+    /* small helper – no flashy stuff */
+    .hidden-status {
+      position: absolute;
+      width: 1px;
+      height: 1px;
+      padding: 0;
+      margin: -1px;
+      overflow: hidden;
+      clip: rect(0,0,0,0);
+      border: 0;
+    }
+
+    /* responsive */
+    @media (max-width: 420px) {
+      .card { padding: 2rem 1.5rem; }
+      .subtle-trigger .action-hint { display: none; }
+    }
+  </style>
+</head>
+<body>
+
+<div class="card" role="main">
+
+  <div class="emoji-big">↗</div>
+  <h2>Lanjut ke Jajalter</h2>
+  <p class="description">
+    Untuk melanjutkan ke halaman Jajalter, silakan klik area di bawah ini untuk memverifikasi bahwa Anda adalah manusia. Setelah verifikasi, tombol "Lanjut ke halaman" akan aktif. Hal ini dilakukan untuk keperluan privasi.
+  </p>
+
+  <!-- subtle verification: click anywhere on this area -->
+  <div class="subtle-trigger" id="verifyZone" role="button" tabindex="0" aria-label="verify you're human, click or tap">
+    <div class="label">
+      <span class="icon-mute" id="iconMute">◎</span>
+      <span class="action-hint" id="actionHint">TEKAN SAYA UNTUK VERIFIKASI</span>
+    </div>
+  </div>
+
+  <!-- redirect button (appears normal, but only works after verification) -->
+  <button class="redirect-btn" id="redirectBtn" disabled>
+    <span id="btnLabel">→ Lanjut ke halaman</span>
+  </button>
+
+  <div class="footnote">
+    <span>kenzie</span>
+    <span class="dot">·</span>
+    <span>iya ini beneran</span>
+  </div>
+
+  <!-- hidden status for screen readers / a11y -->
+  <div class="hidden-status" id="a11yStatus" aria-live="polite">waiting for verification</div>
+</div>
+
+<script>
+  (function() {
+    "use strict";
+
+    // ---- CONFIG: change this to your target URL ----
+    const DESTINATION = 'https://fun.141412.xyz/a123456.html';   // <-- replace with your real URL
+
+    // ---- DOM refs ----
+    const verifyZone = document.getElementById('verifyZone');
+    const redirectBtn = document.getElementById('redirectBtn');
+    const btnLabel = document.getElementById('btnLabel');
+    const iconMute = document.getElementById('iconMute');
+    const actionHint = document.getElementById('actionHint');
+    const a11yStatus = document.getElementById('a11yStatus');
+
+    // ---- state ----
+    let isVerified = false;           // human passed the subtle check
+    let interactionRecorded = false; // to prevent automated triggering
+
+    // ---- helper: mark as verified (human) ----
+    function markVerified() {
+      if (isVerified) return; // already done
+
+      // update UI with calm, subtle style changes
+      verifyZone.classList.add('verified');
+      iconMute.textContent = '✓';
+      actionHint.textContent = 'verified';
+      // enable button
+      redirectBtn.disabled = false;
+      redirectBtn.classList.add('active');
+      btnLabel.textContent = '→ Lanjut ke halaman';
+      // a11y
+      a11yStatus.textContent = 'verified, click continue to proceed';
+
+      isVerified = true;
+      interactionRecorded = true;
+
+      // optional: tiny extra touch — no alert, no noise.
+      console.log('✓ human verified (subtle)');
+    }
+
+    // ---- verification trigger: click or tap on the zone ----
+    function handleVerification(e) {
+      // prevent context menu / weird interactions
+      e.preventDefault?.();
+
+      // we record any click/tap as human interaction
+      // but we also require that the click is intentional — 
+      // we don't want to verify on a mis‑click? 
+      // but this is subtle enough: any click on the zone is fine.
+      // bots that simulate a click might trigger this, but we add a secondary
+      // check: we also track that the event is trusted (isTrusted) — 
+      // but we only use it as an extra signal, not a hard block.
+
+      // we also track that the event is not a programmatic dispatch.
+      // if the event is trusted (real user click), we mark verified.
+      // but we don't want to be too strict: some users might use assistive tech.
+      // we'll allow if it's a click or touch event.
+      if (e && e.isTrusted === false) {
+        // if it's a synthetic event (likely bot), we ignore.
+        // but we still let it through if it's a real event.
+        // we'll check the isTrusted flag. 
+        // However, some bots can generate trusted events, but this raises the bar.
+        // we also check that the event target is the zone or its children.
+        // we'll still allow if isTrusted is false but we have a fallback: 
+        // we also track that the user has moved the mouse over the zone (hover)
+        // but we don't want to overcomplicate.
+        // we keep it simple: we require a 'click' or 'touch' event that is trusted.
+        // For accessibility, we also listen for 'keydown' on the zone (Enter/Space)
+        // and those are trusted as well.
+        // we'll just use a combination: we mark verified on any click/touch/keydown
+        // that is trusted. But if isTrusted is false, we ignore.
+        // this blocks most programmatic clicks.
+        if (!e.isTrusted) {
+          // but we still want to allow some legitimate automation? no.
+          // we want to be human-only.
+          // we'll ignore synthetic events.
+          return;
+        }
+      }
+
+      // additional: if the event is a click or touch, we mark.
+      // we also allow keyboard activation (Enter/Space) on the zone.
+      // we'll handle that separately.
+      markVerified();
+    }
+
+    // ---- keyboard support for accessibility (Enter / Space) ----
+    function handleKeydown(e) {
+      if (e.key === 'Enter' || e.key === ' ') {
+        e.preventDefault(); // prevent page scroll on space
+        // treat as verification attempt
+        if (e.isTrusted) {
+          markVerified();
+        }
+      }
+    }
+
+    // ---- attach events to the subtle zone ----
+    verifyZone.addEventListener('click', handleVerification);
+    verifyZone.addEventListener('touchstart', handleVerification, { passive: true });
+    verifyZone.addEventListener('keydown', handleKeydown);
+
+    // ---- also if someone clicks the button directly (but it's disabled) ----
+    // we don't want to verify on button click, only on the zone.
+    // but we add a small measure: if someone clicks the button while disabled,
+    // we show a subtle hint? no — we keep it silent.
+
+    // ---- redirect logic (only when verified and button clicked) ----
+    redirectBtn.addEventListener('click', function(e) {
+      if (!isVerified) {
+        // should not happen because button is disabled
+        e.preventDefault();
+        return;
+      }
+
+      // extra safeguard: if somehow the button is active but not verified,
+      // we block.
+      if (!isVerified) {
+        return;
+      }
+
+      // if the click on the button is synthetic (not trusted), we block.
+      if (e.isTrusted === false) {
+        // but we still want to allow if it's a real click.
+        // we'll block synthetic clicks on the button.
+        e.preventDefault();
+        return;
+      }
+
+      // human verified + real click: redirect
+      // show a tiny feedback (optional)
+      btnLabel.textContent = '⏳ redirecting…';
+      redirectBtn.disabled = true;
+      redirectBtn.classList.remove('active');
+
+      // small delay so the user sees the feedback (and to prevent accidental double-click)
+      setTimeout(function() {
+        window.location.href = DESTINATION;
+      }, 180);
+    });
+
+    // ---- extra subtlety: we also mark verified if the user hovers over the zone for a while? 
+    // no, that would be too easy for bots. We only verify on click/touch/keydown.
+
+    // ---- extra anti-bot: track mouse movements? no, we want to keep it simple.
+
+    // ---- but we want to be robust: if someone uses a screen reader, they can click the zone.
+
+    // ---- we also add a small 'reset' if needed? but we keep it stateless.
+
+    // ---- initialization: set a11y status ----
+    a11yStatus.textContent = 'click the verification zone to continue';
+
+    // ---- optional: if the user has JavaScript disabled, they can't proceed,
+    // but that's fine, they'll see the button disabled.
+
+    console.log('↗ subtle human redirector ready. Click the grey area to verify.');
+    console.log('→ destination:', DESTINATION);
+
+    // ---- expose for debugging (optional) ----
+    window.__subtleGate = {
+      verify: markVerified,
+      isVerified: () => isVerified,
+      reset: function() {
+        // not needed, but for completeness
+        isVerified = false;
+        interactionRecorded = false;
+        verifyZone.classList.remove('verified');
+        iconMute.textContent = '◎';
+        actionHint.textContent = 'click to verify';
+        redirectBtn.disabled = true;
+        redirectBtn.classList.remove('active');
+        btnLabel.textContent = '→ go to page';
+        a11yStatus.textContent = 'waiting for verification';
+      }
+    };
+
+  })();
+</script>
+
+<!-- 
+  Design philosophy:
+  - No "I am not a robot" badges, no sliders, no puzzles.
+  - A simple click on a calm, neutral area.
+  - The button is naturally disabled until you click the zone.
+  - Visually, it looks like a normal "continue" flow.
+  - The verification is almost invisible: the zone subtly changes style.
+  - Bots that programmatically click the button will fail because:
+    1) the button is disabled until the zone is clicked.
+    2) the zone click must be a trusted event (isTrusted = true).
+    3) the button click also checks for isTrusted.
+  - Screen reader friendly: the zone is focusable and has aria-label.
+  - No intrusive popups, no reCAPTCHA, no friction.
+-->
+
+</body>
+</html>

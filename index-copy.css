@@ -1,0 +1,287 @@
+* {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        body {
+            font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+            background: #f4f4f4 url('./bg.jpg') repeat;
+            color: #333333;
+            font-size: 14px;
+            line-height: 1.6;
+        }
+        a {
+            color: #0066cc;
+            text-decoration: none;
+        }
+        a:hover {
+            text-decoration: underline;
+        }
+
+        /* --- CONTAINER --- */
+        .wrapper {
+            width: 960px;
+            margin: 0 auto;
+            background: #ffffff;
+            box-shadow: 0 0 10px rgba(0,0,0,0.15);
+        }
+
+        /* --- HEADER & NAVIGATION --- */
+        header {
+            padding: 25px 20px;
+            background: #ffffff;
+            border-bottom: 4px solid #ff3030;
+            overflow: hidden;
+        }
+        .logo {
+            float: left;
+        }
+        .logo img {
+            vertical-align: middle;
+            margin-right: 8px;
+        }
+        .logo h1 {
+            display: inline-block;
+            vertical-align: middle;
+            font-size: 28px;
+            color: #222;
+            font-weight: bold;
+            letter-spacing: -1px;
+        }
+        .logo h1 span {
+            color: #ff3030;
+        }
+        .logo p {
+            font-size: 11px;
+            color: #777;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+        }
+        nav {
+            float: right;
+            margin-top: 15px;
+        }
+        nav ul {
+            list-style: none;
+        }
+        nav ul li {
+            display: inline-block;
+            margin-left: 20px;
+        }
+        nav ul li a {
+            font-size: 14px;
+            font-weight: bold;
+            color: #555;
+            padding: 5px 10px;
+        }
+        nav ul li a.active, nav ul li a:hover {
+            color: #ff3030;
+            
+        }
+
+        /* --- HERO FEATURE SLIDER (2012 Style) --- */
+        .hero {
+            background: #1f252c linear-gradient(to bottom, #2c353f, #151a1e);
+            color: #ffffff;
+            padding: 40px;
+            position: relative;
+            border-bottom: 1px solid #000;
+        }
+        .hero-content {
+            width: 50%;
+            float: left;
+            padding-right: 20px;
+        }
+        .hero-content h2 {
+            font-size: 32px;
+            line-height: 1.2;
+            margin-bottom: 15px;
+            color: #fff;
+            text-shadow: 0 2px 4px rgba(0,0,0,0.6);
+        }
+        .hero-content p {
+            font-size: 16px;
+            color: #b0b9c1;
+            margin-bottom: 25px;
+        }
+        .btn-cta {
+            display: inline-block;
+            background: #ff9900 linear-gradient(to bottom, #ffb33b, #ff8800);
+            color: #fff;
+            padding: 12px 25px;
+            font-size: 16px;
+            font-weight: bold;
+            
+            border: 1px solid #d47a00;
+            box-shadow: inset 0 1px 0 rgba(255,255,255,0.4), 0 2px 3px rgba(0,0,0,0.3);
+            text-shadow: 0 -1px 1px rgba(0,0,0,0.25);
+        }
+        .btn-cta:hover {
+            background: #ff8800 linear-gradient(to bottom, #ff9900, #e67700);
+            text-decoration: none;
+        }
+        .hero-image {
+            width: 50%;
+            float: right;
+            text-align: right;
+        }
+        .hero-image img {
+            max-width: 100%;
+            border: 4px solid #333;
+            
+            box-shadow: 0 5px 15px rgba(0,0,0,0.5);
+        }
+        .clear {
+            clear: both;
+        }
+
+        /* --- THREE-COLUMN FEATURES --- */
+        .features {
+            padding: 40px 20px;
+            background: #f9f9f9;
+            border-bottom: 1px solid #e5e5e5;
+        }
+        .col {
+            width: 30.66%;
+            float: left;
+            margin-right: 4%;
+            background: #fff;
+            border: 1px solid #dfdfdf;
+            
+            padding: 20px;
+            box-shadow: 0 1px 3px rgba(0,0,0,0.05);
+        }
+        .col.last {
+            margin-right: 0;
+        }
+        .col h3 {
+            font-size: 18px;
+            color: #ff3030;
+            margin-bottom: 10px;
+            border-bottom: 1px solid #eee;
+            padding-bottom: 8px;
+        }
+        .col p {
+            color: #666;
+            font-size: 13px;
+            margin-bottom: 15px;
+        }
+
+        /* --- PRODUCT GALLERY SECTION --- */
+        .gallery-section {
+            padding: 40px 20px;
+        }
+        .gallery-section h2 {
+            font-size: 22px;
+            margin-bottom: 20px;
+            color: #333;
+            border-bottom: 2px solid #e5e5e5;
+            padding-bottom: 10px;
+        }
+        .gallery-grid {
+            margin-right: -20px;
+        }
+        .gallery-item {
+            width: 215px;
+            float: left;
+            margin-right: 20px;
+            margin-bottom: 20px;
+            border: 1px solid #ccc;
+            padding: 6px;
+            background: #fff;
+            box-shadow: 0 1px 4px rgba(0,0,0,0.1);
+        }
+        .gallery-item img {
+            width: 100%;
+            height: 130px;
+            display: block;
+            margin-bottom: 8px;
+        }
+        .gallery-item h4 {
+            font-size: 14px;
+            color: #222;
+            margin-bottom: 4px;
+        }
+        .gallery-item p {
+            font-size: 12px;
+            color: #777;
+        }
+
+        /* --- FOOTER --- */
+        footer {
+            background: #222222;
+            color: #999999;
+            padding: 30px 20px;
+            font-size: 12px;
+            border-top: 5px solid #333;
+        }
+        .footer-left {
+            float: left;
+        }
+        .footer-right {
+            float: right;
+        }
+        .footer-right a {
+            color: #bbb;
+            margin-left: 15px;
+        }
+
+        /* ==========================================
+           2012 MOBILE & TABLET RESPONSIVE SUPPORT
+           ========================================== */
+        @media screen and (max-width: 959px) {
+            .wrapper {
+                width: 100%;
+            }
+            .hero-content, .hero-image {
+                width: 100%;
+                float: none;
+            }
+            .hero-image {
+                text-align: center;
+                margin-top: 30px;
+            }
+            .col {
+                width: 100%;
+                float: none;
+                margin-right: 0;
+                margin-bottom: 20px;
+            }
+            .gallery-item {
+                width: 45%;
+                margin-right: 5%;
+            }
+        }
+
+        @media screen and (max-width: 640px) {
+            header {
+                text-align: center;
+            }
+            .logo, nav {
+                float: none;
+                text-align: center;
+            }
+            nav {
+                margin-top: 20px;
+            }
+            nav ul li {
+                margin: 0 5px;
+            }
+            .hero {
+                padding: 20px;
+            }
+            .hero-content h2 {
+                font-size: 24px;
+            }
+            .gallery-item {
+                width: 100%;
+                margin-right: 0;
+                float: none;
+            }
+            .footer-left, .footer-right {
+                float: none;
+                text-align: center;
+                margin-bottom: 10px;
+            }
+        }
+    

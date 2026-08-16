@@ -1,0 +1,44 @@
+{
+  "Technology": [
+    "ALGORITHM",
+    "DATABASE",
+    "FIREWALL",
+    "COMPILER",
+    "INTERFACE",
+    "FRAMEWORK",
+    "BANDWIDTH",
+    "PROCESSOR",
+    "BROWSER",
+    "METADATA",
+    "CYBERSECURITY",
+    "ENCRYPTION"
+  ],
+  "Geography": [
+    "REYKJAVIK",
+    "MADAGASCAR",
+    "HIMALAYAS",
+    "MISSISSIPPI",
+    "ARCHIPELAGO",
+    "PENINSULA",
+    "EQUATOR",
+    "MEDITERRANEAN",
+    "SVALBARD",
+    "KILIMANJARO",
+    "GIBRALTAR",
+    "CARIBBEAN"
+  ],
+  "Astronomy": [
+    "CONSTELLATION",
+    "SUPERNOVA",
+    "NEBULA",
+    "LIGHTYEAR",
+    "ASTEROID",
+    "METEORITE",
+    "TELESCOPE",
+    "UNIVERSE",
+    "GALACTIC",
+    "GRAVITY",
+    "EXOPLANET",
+    "ANDROMEDA"
+  ]
+}

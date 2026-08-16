@@ -1,0 +1,211 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>IndexedDB for TurboWarp</title>
+  <style>
+    :root {
+      --red-light: #ffcccc;
+      --red: #cc0000;
+      --red-dark: #990000;
+      --white: #ffffff;
+      --gray: #f5f5f5;
+    }
+
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+      font-family: 'Segoe UI', sans-serif;
+    }
+
+    body {
+      background-color: var(--white);
+      color: var(--red-dark);
+      line-height: 1.6;
+    }
+
+    header {
+      background: var(--red);
+      color: var(--white);
+      padding: 4rem 2rem;
+      text-align: center;
+    }
+
+    header h1 {
+      font-size: 2.5rem;
+      margin-bottom: 1rem;
+    }
+
+    .subheadline {
+      font-size: 1.2rem;
+      margin-bottom: 2rem;
+    }
+
+    .button {
+      background: var(--red-dark);
+      color: var(--white);
+      padding: 0.75rem 1.5rem;
+      text-decoration: none;
+      border-radius: 5px;
+      transition: background 0.3s;
+    }
+
+    .button:hover {
+      background: #660000;
+    }
+
+    .button1 {
+      color: var(--white);
+      padding: 0.75rem 1.5rem;
+      text-decoration: none;
+      border-radius: 5px;
+      transition: background 0.3s;
+    }
+
+    .button1:hover {
+      color: #660000;
+    }
+
+    section {
+      padding: 3rem 2rem;
+      max-width: 1000px;
+      margin: 0 auto;
+    }
+
+    h2 {
+      font-size: 2rem;
+      text-align: center;
+      margin-bottom: 2rem;
+      color: var(--red);
+    }
+
+    .feature-cards {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 1.5rem;
+      justify-content: center;
+    }
+
+    .card {
+      background: var(--gray);
+      padding: 1.5rem;
+      border-radius: 8px;
+      width: 300px;
+      box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+    }
+
+    .card h3 {
+      margin-bottom: 0.5rem;
+      color: var(--red-dark);
+    }
+
+    .how-it-works .steps {
+      display: flex;
+      flex-direction: column;
+      gap: 1.5rem;
+    }
+
+    .step {
+      display: flex;
+      align-items: flex-start;
+      gap: 1rem;
+    }
+
+    .step-number {
+      background: var(--red-light);
+      color: var(--red-dark);
+      font-weight: bold;
+      padding: 0.75rem;
+      border-radius: 50%;
+      width: 2.5rem;
+      height: 2.5rem;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 1.2rem;
+    }
+
+    footer {
+      background: var(--red-dark);
+      color: var(--white);
+      text-align: center;
+      padding: 1rem;
+      font-size: 0.9rem;
+    }
+
+    footer a {
+      color: var(--white);
+      text-decoration: underline;
+    }
+
+    @media (max-width: 768px) {
+      .feature-cards {
+        flex-direction: column;
+        align-items: center;
+      }
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <a class="button1" href="index.html">Home</a>
+    <a class="button1" href="contact.html">Contact</a>
+    <a class="button1" href="about.html">About</a>
+    <a class="button1" href="projects.html">Other</a>
+    <h1>INDEXEDDB Extension for Turbowarp</h1>
+    <p class="subheadline">Seamlessly save and retrieve user data, game states, and more directly within the TurboWarp environment.</p>
+<a href="https://github.com/kenzieshane/IndexedDB-for-Turbowarp/releases" class="button">Download</a>
+  </header>
+
+  <section class="features">
+    <h2>Key Benefits</h2>
+    <div class="feature-cards">
+      <div class="card">
+        <h3>Persistent Storage</h3>
+        <p>Enable your TurboWarp creations to remember user progress and data even after the browser/app/project is closed.</p>
+      </div>
+      <div class="card">
+        <h3>Offline Capabilities</h3>
+        <p>Empower your projects to function even without an internet connection by leveraging local storage.</p>
+      </div>
+      <div class="card">
+        <h3>Improved Performance</h3>
+        <p>Access and manage data efficiently, leading to smoother and more responsive TurboWarp experiences.</p>
+      </div>
+       <div class="card">
+        <h3>Larger capacity</h3>
+        <p>10mb of storage? That is a thing of the past! This method allows you to use Gigabytes of save data!</p>
+      </div>
+      <div class="card">
+        <h3>Open source!</h3>
+        <p>&NonBreakingSpace;</p>
+        <a href="https://github.com/kenzieshane/IndexedDB-for-Turbowarp" class="button">Explore the Code on GitHub</a>
+      </div>
+    </div>
+  </section>
+
+  <section class="how-it-works">
+    <h2>A very basic How To</h2>
+    <div class="steps">
+      <div class="step">
+        <div class="step-number">1</div>
+        <p>Include the provided JavaScript extension in your TurboWarp project. (In [Add an Extension] --> [Custom extension] --> From file. <br> <strong>Don't forget to run it unsandboxed! </strong></p>
+      </div>
+      <div class="step">
+        <div class="step-number">2</div>
+        <p>Utilize the simple API to store and retrieve data using IndexedDB.</p>
+      </div>
+      <div class="step">
+        <div class="step-number">3</div>
+        <p>Enjoy persistent and efficient local data management!</p>
+      </div>
+    </div>
+  </section>
+
+  <footer>
+    <p>&copy; 2025 - Landing Page for <a href="https://github.com/kenzieshane/IndexedDB-for-Turbowarp">IndexedDB for TurboWarp</a> by KenzieShane</p>
+  </footer>
+</body>
+</html>

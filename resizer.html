@@ -1,0 +1,481 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>KS Resizer · Metro style</title>
+    <!-- Windows 8 / Visual Studio 2012 Metro UI inspiration -->
+    <style>
+        * {
+            box-sizing: border-box;
+            margin: 0;
+        }
+
+        body {
+            background-color: #1c1c1c; /* dark metro background */
+            font-family: 'Segoe UI', 'Segoe UI Light', 'Helvetica Neue', Arial, sans-serif;
+            color: #ffffff;
+            margin: 0;
+            padding: 24px;
+            min-height: 100vh;
+            display: flex;
+            justify-content: center;
+        }
+
+        .metro-grid {
+            max-width: 800px;
+            width: 100%;
+            background-color: transparent;
+        }
+
+        /* scrollviewer behavior */
+        .scroll-wrapper {
+            max-height: 98vh;
+            overflow-y: auto;
+            padding-right: 4px;
+        }
+        .scroll-wrapper::-webkit-scrollbar {
+            width: 8px;
+            background: #2a2a2a;
+        }
+        .scroll-wrapper::-webkit-scrollbar-thumb {
+            background: #fc0000;
+            border-radius: 6px;
+        }
+
+        /* main grid with row definitions */
+        .metro-panel {
+            display: flex;
+            flex-direction: column;
+            gap: 24px;
+            margin: 0 0 12px 0;
+        }
+
+        /* header stack */
+        .header-stack {
+            margin-bottom: 4px;
+        }
+        .main-title {
+            font-size: 50px;
+            font-weight: 300;   /* Segoe UI Light */
+            letter-spacing: -0.5px;
+            color: #ffffff;
+            margin: 0;
+            line-height: 1.1;
+        }
+        .sub-title {
+            font-size: 18px;
+            font-weight: 400;
+            color: #cccccc;
+            margin: 8px 0 0 0;
+            word-break: break-word;
+        }
+
+        /* metro cards (borders) */
+        .metro-card {
+            background-color: #2b2b2b; /* fallback, but we use per-card bg */
+            padding: 20px;
+            border: 1px solid #3a3a3a;
+            border-bottom-width: 3px;
+        }
+
+        .card-step1 { background-color: #d32f2f; border-bottom-color: #b71c1c; }
+        .card-step2 { background-color: #c62828; border-bottom-color: #b71c1c; }
+        .card-step3 { background-color: #b71c1c; border-bottom-color: #8e0000; }
+
+        .card-header {
+            font-size: 20px;
+            font-weight: 600;
+            color: #ffffff;
+            margin: 0 0 12px 0;
+            letter-spacing: -0.3px;
+        }
+
+        .btn-metro {
+            background: #1f1f1f;
+            border: none;
+            color: white;
+            font-size: 16px;
+            font-weight: 500;
+            padding: 8px 22px;
+            margin: 8px 0 6px 0;
+            cursor: pointer;
+            transition: background 0.15s, transform 0.05s;
+            border: 1px solid #444;
+            display: inline-block;
+            min-width: 120px;
+            text-align: center;
+        }
+        .btn-metro:hover {
+            background: #333;
+            border-color: #666;
+        }
+        .btn-metro:active {
+            transform: scale(0.97);
+        }
+        .btn-generate {
+            background: #1f1f1f;
+            border: 1px solid #666;
+            padding: 12px 32px;
+            font-size: 18px;
+            font-weight: 500;
+            margin-bottom: 8px;
+        }
+        .btn-generate:hover {
+            background: #333;
+        }
+
+        .path-text {
+            color: #d4d4d4;
+            margin: 10px 0 0 0;
+            word-break: break-all;
+            font-size: 15px;
+            background: rgba(0,0,0,0.2);
+            padding: 6px 10px;
+            border-left: 3px solid #ffb74d;
+        }
+
+        .radio-group {
+            display: flex;
+            flex-direction: column;
+            gap: 6px;
+            margin: 6px 0 0 0;
+        }
+
+        .metro-radio {
+            display: flex;
+            align-items: center;
+            gap: 12px;
+            padding: 6px 0 6px 4px;
+            font-size: 17px;
+            font-weight: 400;
+            color: #f0f0f0;
+            cursor: pointer;
+        }
+        .metro-radio input[type="radio"] {
+            appearance: none;
+            width: 20px;
+            height: 20px;
+            border: 2px solid #bbb;
+            border-radius: 50%;
+            background: #2a2a2a;
+            transition: 0.1s;
+            flex-shrink: 0;
+            position: relative;
+            cursor: pointer;
+        }
+        .metro-radio input[type="radio"]:checked {
+            border-color: #ffffff;
+            background: #000000;
+        }
+
+        .metro-radio span {
+            display: inline-block;
+        }
+        .size-detail {
+            color: #cfcfcf;
+            font-weight: 300;
+            margin-left: 4px;
+        }
+
+        .status-text {
+            margin: 16px 0 0 0;
+            padding: 10px 14px;
+            background: #1a1a1a;
+            border-left: 6px solid #fc0000;
+            color: #f0f0f0;
+            font-size: 16px;
+            word-break: break-word;
+        }
+
+        .footer-note {
+            font-size: 14px;
+            color: #999;
+            margin-top: 20px;
+            text-align: center;
+            border-top: 1px solid #333;
+            padding-top: 20px;
+        }
+
+        .inline-flex {
+            display: flex;
+            flex-wrap: wrap;
+            align-items: center;
+            gap: 12px;
+        }
+
+        /* small tweaks */
+        .mt-0 { margin-top: 0; }
+        .mb-0 { margin-bottom: 0; }
+        .mt-8 { margin-top: 8px; }
+
+        /* responsive */
+        @media (max-width: 480px) {
+            body { padding: 12px; }
+            .main-title { font-size: 38px; }
+            .metro-card { padding: 16px; }
+        }
+    </style>
+</head>
+<body>
+
+<div class="metro-grid">
+    <div class="scroll-wrapper">
+        <div class="metro-panel">
+
+            <!-- header: exactly as XAML style -->
+            <div class="header-stack">
+                <div class="main-title">KS Resizer</div>
+                <div class="sub-title">Pick one source image, choose an output folder, then generate the standard Windows 8 app images. Pretty nifty, I know.</div>
+            </div>
+
+            <!-- 1. Choose source image -->
+            <div class="metro-card card-step1">
+                <div class="card-header">1. Choose source image</div>
+                <button class="btn-metro" id="pickSourceBtn">Select image</button>
+                <div class="path-text" id="sourcePathText">No image selected</div>
+
+                <div style="margin-top: 18px;">
+                    <div class="card-header" style="font-size:20px; margin-bottom:4px;">2. Choose output folder</div>
+                    <button class="btn-metro" id="pickFolderBtn">Select folder</button>
+                    <div class="path-text" id="folderPathText">No output folder selected</div>
+                </div>
+            </div>
+
+            <!-- 3. Select output sizes (radio) -->
+            <div class="metro-card card-step2">
+                <div class="card-header">3. Select output sizes</div>
+                <div class="radio-group">
+                    <label class="metro-radio">
+                        <input type="radio" name="sizeOption" value="logo" checked>
+                        <span><strong>150 x 150</strong>  <span class="size-detail">|  logo.png</span></span>
+                    </label>
+                    <label class="metro-radio">
+                        <input type="radio" name="sizeOption" value="smallLogo">
+                        <span><strong>30 x 30</strong>  <span class="size-detail">|  smallLogo.png</span></span>
+                    </label>
+                    <label class="metro-radio">
+                        <input type="radio" name="sizeOption" value="splash">
+                        <span><strong>620 x 300</strong>  <span class="size-detail">|  splashscreen.png</span></span>
+                    </label>
+                    <label class="metro-radio">
+                        <input type="radio" name="sizeOption" value="storeLogo">
+                        <span><strong>50 x 50</strong>  <span class="size-detail">|  storelogo.png</span></span>
+                    </label>
+                </div>
+            </div>
+
+            <!-- 4. Generate -->
+            <div class="metro-card card-step3">
+                <button class="btn-metro btn-generate" id="generateBtn">Generate resized PNGs</button>
+                <div class="status-text" id="statusText">Ready</div>
+            </div>
+
+        </div>
+    </div>
+</div>
+
+<script>
+    (function() {
+        // ----- state -----
+        let sourceFile = null;          // File object
+        let sourceDataUrl = null;       // for preview / resize
+        let outputFolderHandle = null;  // FileSystemDirectoryHandle (if supported)
+        let outputFolderPath = 'No output folder selected';
+
+        // DOM elements
+        const sourcePathText = document.getElementById('sourcePathText');
+        const folderPathText = document.getElementById('folderPathText');
+        const statusText = document.getElementById('statusText');
+        const pickSourceBtn = document.getElementById('pickSourceBtn');
+        const pickFolderBtn = document.getElementById('pickFolderBtn');
+        const generateBtn = document.getElementById('generateBtn');
+
+        // radio buttons
+        const radioLogo = document.querySelector('input[name="sizeOption"][value="logo"]');
+        const radioSmall = document.querySelector('input[name="sizeOption"][value="smallLogo"]');
+        const radioSplash = document.querySelector('input[name="sizeOption"][value="splash"]');
+        const radioStore = document.querySelector('input[name="sizeOption"][value="storeLogo"]');
+
+        // ----- helper: set status -----
+        function setStatus(msg, isError = false) {
+            statusText.textContent = msg;
+            statusText.style.borderLeftColor = isError ? '#ff5252' : '#fc0000';
+        }
+
+        // ----- pick source image (File API) -----
+        pickSourceBtn.addEventListener('click', () => {
+            const input = document.createElement('input');
+            input.type = 'file';
+            input.accept = 'image/png,image/jpeg,image/jpg,image/bmp,image/gif,image/webp';
+            input.onchange = (e) => {
+                const file = input.files[0];
+                if (!file) return;
+                // validate image
+                if (!file.type.startsWith('image/')) {
+                    setStatus('Selected file is not an image.', true);
+                    return;
+                }
+                sourceFile = file;
+                sourcePathText.textContent = file.name + '  (' + (file.size / 1024).toFixed(1) + ' KB)';
+                setStatus('Image loaded: ' + file.name);
+
+                // read as data URL for canvas
+                const reader = new FileReader();
+                reader.onload = (ev) => {
+                    sourceDataUrl = ev.target.result;
+                    // optional: validate image dimensions?
+                };
+                reader.readAsDataURL(file);
+            };
+            input.click();
+        });
+
+        // ----- pick output folder (File System Access API) -----
+        pickFolderBtn.addEventListener('click', async () => {
+            try {
+                // check if API available
+                if (!window.showDirectoryPicker) {
+                    // fallback: prompt for folder path (but we can't write)
+                    const fakePath = prompt('Your browser does not support the File System Access API.\nPlease enter a folder name (simulated):', 'MyAppAssets');
+                    if (fakePath !== null && fakePath.trim() !== '') {
+                        outputFolderPath = '📁 ' + fakePath.trim() + ' (simulated)';
+                        folderPathText.textContent = outputFolderPath;
+                        outputFolderHandle = { fake: true, name: fakePath.trim() };
+                        setStatus('Folder selected (simulated)');
+                    } else {
+                        setStatus('Folder selection cancelled.', true);
+                    }
+                    return;
+                }
+
+                const dirHandle = await window.showDirectoryPicker({ mode: 'readwrite' });
+                outputFolderHandle = dirHandle;
+                outputFolderPath = '📁 ' + dirHandle.name;
+                folderPathText.textContent = outputFolderPath;
+                setStatus('Output folder set: ' + dirHandle.name);
+            } catch (err) {
+                if (err.message && err.message.includes('abort')) {
+                    setStatus('Folder selection cancelled.', true);
+                } else {
+                    setStatus('Error selecting folder: ' + err.message, true);
+                }
+                console.warn(err);
+            }
+        });
+
+        // ----- resize & generate -----
+        function getSelectedSize() {
+            if (radioLogo.checked) return { width: 150, height: 150, fileName: 'logo.png' };
+            if (radioSmall.checked) return { width: 30, height: 30, fileName: 'smallLogo.png' };
+            if (radioSplash.checked) return { width: 620, height: 300, fileName: 'splashscreen.png' };
+            if (radioStore.checked) return { width: 50, height: 50, fileName: 'storelogo.png' };
+            return null;
+        }
+
+        function resizeImage(dataUrl, targetWidth, targetHeight) {
+            return new Promise((resolve, reject) => {
+                const img = new Image();
+                img.onload = () => {
+                    const canvas = document.createElement('canvas');
+                    canvas.width = targetWidth;
+                    canvas.height = targetHeight;
+                    const ctx = canvas.getContext('2d');
+                    // fill with transparent (metro style)
+                    ctx.clearRect(0, 0, targetWidth, targetHeight);
+                    // draw with cover / contain? we use 'cover' style: fill exactly, keep aspect ratio by cropping? 
+                    // but for app icons we want to stretch? Actually we preserve aspect ratio and center.
+                    // best: contain with background? but we want fill exactly (stretch) for demo.
+                    // but to be safe: we draw image to fit exactly (stretch) - typical for simple resizer.
+                    ctx.drawImage(img, 0, 0, targetWidth, targetHeight);
+                    resolve(canvas.toDataURL('image/png'));
+                };
+                img.onerror = () => reject(new Error('Failed to load image for resizing.'));
+                img.src = dataUrl;
+            });
+        }
+
+        // simulate download / save via Filesystem API or fallback
+        async function saveImage(dataUrl, fileName, folderHandle) {
+            // if we have real folder handle
+            if (folderHandle && !folderHandle.fake && typeof folderHandle.getFileHandle === 'function') {
+                try {
+                    const fileHandle = await folderHandle.getFileHandle(fileName, { create: true });
+                    const writable = await fileHandle.createWritable();
+                    // convert dataUrl to blob
+                    const response = await fetch(dataUrl);
+                    const blob = await response.blob();
+                    await writable.write(blob);
+                    await writable.close();
+                    return true;
+                } catch (err) {
+                    console.error('Error writing file via FileSystem API:', err);
+                    throw err;
+                }
+            } else {
+                // fallback: download via anchor
+                return new Promise((resolve) => {
+                    const a = document.createElement('a');
+                    a.href = dataUrl;
+                    a.download = fileName;
+                    document.body.appendChild(a);
+                    a.click();
+                    document.body.removeChild(a);
+                    resolve(true);
+                });
+            }
+        }
+
+        generateBtn.addEventListener('click', async () => {
+            // validate source
+            if (!sourceDataUrl) {
+                setStatus('Please select a source image first.', true);
+                return;
+            }
+            // validate folder
+            if (!outputFolderHandle) {
+                setStatus('Please select an output folder.', true);
+                return;
+            }
+
+            const sizeDef = getSelectedSize();
+            if (!sizeDef) {
+                setStatus('No size selected.', true);
+                return;
+            }
+
+            setStatus('Resizing to ' + sizeDef.width + 'x' + sizeDef.height + ' ...');
+
+            try {
+                const resizedDataUrl = await resizeImage(sourceDataUrl, sizeDef.width, sizeDef.height);
+                // save
+                await saveImage(resizedDataUrl, sizeDef.fileName, outputFolderHandle);
+                setStatus('✅ Generated ' + sizeDef.fileName + ' (' + sizeDef.width + '×' + sizeDef.height + ')');
+            } catch (err) {
+                setStatus('❌ Error: ' + err.message, true);
+                console.error(err);
+            }
+        });
+
+        // additional: if user selects a radio, we update status
+        document.querySelectorAll('input[name="sizeOption"]').forEach(radio => {
+            radio.addEventListener('change', () => {
+                const size = getSelectedSize();
+                if (size) {
+                    setStatus('Selected: ' + size.fileName + ' (' + size.width + '×' + size.height + ')');
+                }
+            });
+        });
+
+        // initial status
+        setStatus('Ready – select an image and folder.');
+
+        // ---- small extra: if no File System API, show hint ----
+        if (!window.showDirectoryPicker) {
+            folderPathText.textContent = '⚠️ Folder picker uses simulated mode (prompt)';
+        }
+    })();
+</script>
+
+</body>
+</html>

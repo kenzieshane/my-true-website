@@ -1,0 +1,1 @@
+I do not own these software, but i do have permission to share these

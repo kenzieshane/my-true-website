@@ -1,0 +1,1167 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>✧ image splitter · transparent support ✧</title>
+  <style>
+    /* <-- integrated app.css (dark theme) + splitter custom styles --> */
+    /* === app.css (full dark wiki theme) === */
+    @import url('https://fonts.googleapis.com/css2?family=Open+Sans&display=swap');
+
+    *,
+    *::before,
+    *::after {
+        box-sizing: border-box;
+    }
+
+    code {
+        font-family: monospace, monospace;
+        background-color: #f4f4f4;
+        padding: 0.2em 0.4em;
+        
+        color: #333;
+        font-size: 0.9em;
+    }
+
+    body {
+        --light-gray: #1a1a1f;
+        --dark-bg: #121215;
+        --text-color: #e0e0e0;
+        --accent-red: #d33;
+        --border-color: #333;
+        --hover-gray: #222;
+        --input-bg: #1e1e24;
+        --success-green: #2e7d32;
+        --info-blue: #1565c0;
+        --card-bg: #1c1c20;
+
+        font-family: 'Open Sans', sans-serif;
+        margin: 0;
+        min-height: 100vh;
+        background: var(--dark-bg);
+        color: var(--text-color);
+    }
+
+    /* Force desktop layout by default */
+    body {
+        display: grid;
+        gap: 10px;
+        grid-template-columns: 300px 1fr;
+        grid-template-rows: auto 1fr auto;
+    }
+
+    wiki-header,
+    wiki-nav,
+    wiki-page,
+    footer {
+        display: block;
+    }
+
+    /* Header spans both columns */
+    wiki-header {
+        grid-column: 1 / 3;
+    }
+
+    /* Navigation in left column */
+    wiki-nav {
+        grid-column: 1 / 2;
+    }
+
+    /* Main content in right column */
+    main {
+        grid-column: 2 / 3;
+        padding: 0 20px;
+    }
+
+    /* Footer spans both columns */
+    footer {
+        grid-column: 1 / 3;
+    }
+
+    /* === GLOBAL LINKS === */
+    a {
+        text-decoration: none;
+        color: #ff5c5c; 
+    }
+
+    a:hover {
+        text-decoration: underline;
+    }
+
+    /* === BUTTONS === */
+    button {
+        padding: 0.5rem 1rem;
+        background: #222;
+        border: 1px solid var(--accent-red);
+        
+        color: var(--accent-red);
+        outline: 0;
+        font-size: 12px;
+        cursor: pointer;
+        transition: background 0.2s ease, color 0.2s ease;
+    }
+
+    button:hover {
+        background: var(--hover-gray);
+    }
+
+    button:active {
+        background: #333;
+    }
+
+    pre {
+        font-family: monospace, monospace;
+        background-color: #2d2d2d;
+        color: #f8f8f2;
+        padding: 1em;
+        
+        overflow-x: auto;
+        white-space: pre-wrap;
+    }
+
+    button.primary {
+        color: #fff;
+        background: var(--accent-red);
+        border-color: var(--accent-red);
+    }
+
+    /* === HEADER === */
+    wiki-header {
+        position: relative;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        height: 100px;
+        padding: 0 20px;
+        background: #18181c;
+        border-bottom: 1px solid var(--border-color);
+    }
+
+    wiki-header h1,
+    wiki-header p {
+        margin: 0.25rem 0;
+        line-height: 1.2;
+    }
+
+    wiki-header h1 a {
+        color: #fff;
+    }
+
+    wiki-header .admin {
+        position: absolute;
+        top: 30px;
+        right: 20px;
+        display: flex;
+        flex-wrap: wrap;
+        gap: 5px;
+    }
+
+    /* === NAVIGATION === */
+    wiki-nav {
+        background: #1c1c20;
+        border-right: 2px solid var(--accent-red);
+        min-height: calc(100vh - 100px);
+        padding: 20px 0;
+    }
+
+    wiki-nav a {
+        display: block;
+        color: var(--text-color);
+        padding: 0.75rem 1.5rem;
+        margin: 0;
+        border-left: 3px solid transparent;
+        transition: all 0.2s ease;
+    }
+
+    wiki-nav a:hover {
+        background: var(--hover-gray);
+        border-left-color: var(--accent-red);
+    }
+
+    wiki-nav a.active {
+        background: #252529;
+        border-left-color: var(--accent-red);
+    }
+
+    wiki-nav .empty {
+        padding: 0.6rem 1rem;
+        color: #777;
+    }
+
+    /* === MAIN CONTENT === */
+    main {
+        padding: 20px;
+    }
+
+    .content > :first-child {
+        margin-top: 0;
+    }
+
+    /* === HERO SECTION === */
+    .hero-section {
+        text-align: center;
+        padding: 3rem 1rem;
+        background: linear-gradient(135deg, var(--card-bg) 0%, var(--dark-bg) 100%);
+        
+        margin-bottom: 2rem;
+    }
+
+    .hero-title {
+        font-size: 2.5rem;
+        color: #fff;
+        margin-bottom: 1rem;
+    }
+
+    .hero-subtitle {
+        font-size: 1.2rem;
+        color: #aaa;
+        max-width: 600px;
+        margin: 0 auto 2rem;
+    }
+
+    /* === AUTH PROMPT === */
+    .auth-prompt {
+        text-align: center;
+        padding: 2rem;
+        background: var(--card-bg);
+        border: 1px solid var(--border-color);
+        
+        max-width: 400px;
+        margin: 2rem auto;
+    }
+
+    .auth-prompt h2 {
+        color: var(--accent-red);
+        margin-bottom: 1rem;
+    }
+
+    .auth-prompt p {
+        margin-bottom: 1.5rem;
+        color: #aaa;
+    }
+
+    .auth-prompt .button-group {
+        display: flex;
+        gap: 1rem;
+        justify-content: center;
+    }
+
+    /* === FEATURED SECTION === */
+    .featured-section {
+        margin: 3rem 0;
+    }
+
+    .featured-section h2 {
+        margin-bottom: 1.5rem;
+        font-size: 1.8rem;
+    }
+
+    .featured-grid {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        gap: 1.5rem;
+    }
+
+    .featured-card {
+        background: var(--card-bg);
+        border: 1px solid var(--border-color);
+        
+        padding: 1.5rem;
+    }
+
+    .featured-card h3 {
+        color: var(--accent-red);
+        font-size: 0.9rem;
+        text-transform: uppercase;
+        letter-spacing: 1px;
+        margin-bottom: 0.5rem;
+    }
+
+    .featured-card h4 {
+        margin-bottom: 1rem;
+    }
+
+    .featured-card h4 a {
+        color: #fff;
+        font-size: 1.2rem;
+    }
+
+    .featured-card p {
+        color: #aaa;
+        margin-bottom: 1rem;
+        line-height: 1.6;
+    }
+
+    .card-meta {
+        font-size: 0.85rem;
+        color: #777;
+    }
+
+    /* === RECENT POSTS === */
+    .recent-posts {
+        margin: 3rem 0;
+    }
+
+    .recent-posts h2 {
+        margin-bottom: 1.5rem;
+        font-size: 1.8rem;
+    }
+
+    .posts-list {
+        display: grid;
+        gap: 1.5rem;
+    }
+
+    .post-item {
+        background: var(--card-bg);
+        border: 1px solid var(--border-color);
+        
+        padding: 1.5rem;
+    }
+
+    .post-item h3 {
+        margin-bottom: 0.5rem;
+    }
+
+    .post-item h3 a {
+        color: #fff;
+        font-size: 1.3rem;
+    }
+
+    .post-meta {
+        color: #777;
+        font-size: 0.9rem;
+        margin-bottom: 1rem;
+    }
+
+    .post-excerpt {
+        color: #aaa;
+        line-height: 1.6;
+        margin-bottom: 1rem;
+    }
+
+    .read-more {
+        color: var(--accent-red);
+        font-weight: bold;
+    }
+
+    .view-all {
+        text-align: center;
+        margin-top: 2rem;
+    }
+
+    /* === NEWSLETTER === */
+    .newsletter-section {
+        background: linear-gradient(135deg, var(--card-bg) 0%, var(--dark-bg) 100%);
+        
+        padding: 3rem;
+        margin: 3rem 0;
+        text-align: center;
+    }
+
+    .newsletter-content h2 {
+        margin-bottom: 1rem;
+        font-size: 1.8rem;
+    }
+
+    .newsletter-content p {
+        color: #aaa;
+        margin-bottom: 2rem;
+    }
+
+    .newsletter-form {
+        display: flex;
+        max-width: 500px;
+        margin: 0 auto;
+        gap: 1rem;
+    }
+
+    .newsletter-form input {
+        flex: 1;
+        padding: 0.75rem 1rem;
+        background: var(--input-bg);
+        border: 1px solid var(--border-color);
+        
+        color: var(--text-color);
+        font-size: 1rem;
+    }
+
+    .newsletter-form input:focus {
+        outline: none;
+        border-color: var(--accent-red);
+    }
+
+    /* === DASHBOARD === */
+    .welcome-banner {
+        background: var(--card-bg);
+        
+        padding: 2rem;
+        margin-bottom: 2rem;
+        border-left: 4px solid var(--accent-red);
+    }
+
+    .welcome-banner h1 {
+        font-size: 2rem;
+        margin-bottom: 0.5rem;
+        color: #fff;
+    }
+
+    .dashboard-grid {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        gap: 1.5rem;
+        margin-bottom: 2rem;
+    }
+
+    .dashboard-card {
+        background: var(--card-bg);
+        border: 1px solid var(--border-color);
+        
+        padding: 1.5rem;
+    }
+
+    .dashboard-card h3 {
+        color: var(--accent-red);
+        margin-bottom: 1rem;
+        font-size: 1.1rem;
+    }
+
+    .dashboard-card.full-width {
+        grid-column: 1 / -1;
+    }
+
+    .stat-item {
+        display: flex;
+        justify-content: space-between;
+        margin-bottom: 0.75rem;
+        padding-bottom: 0.75rem;
+        border-bottom: 1px solid var(--border-color);
+    }
+
+    .stat-item:last-child {
+        border-bottom: none;
+    }
+
+    .stat-label {
+        color: #aaa;
+    }
+
+    .stat-value {
+        color: #fff;
+        font-weight: bold;
+    }
+
+    .activity-list {
+        list-style: none;
+        padding: 0;
+    }
+
+    .activity-list li {
+        padding: 0.75rem 0;
+        border-bottom: 1px solid var(--border-color);
+        color: #aaa;
+    }
+
+    .activity-list li:last-child {
+        border-bottom: none;
+    }
+
+    .quick-actions {
+        display: flex;
+        flex-direction: column;
+        gap: 0.75rem;
+    }
+
+    .action-button {
+        display: block;
+        padding: 0.75rem;
+        background: var(--hover-gray);
+        border: 1px solid var(--border-color);
+        
+        color: var(--text-color);
+        text-align: center;
+        transition: all 0.2s ease;
+    }
+
+    .action-button:hover {
+        background: var(--accent-red);
+        color: #fff;
+        text-decoration: none;
+    }
+
+    /* === AUTH LINKS === */
+    .auth-links {
+        display: flex;
+        gap: 1rem;
+        align-items: center;
+    }
+
+    .auth-links a {
+        color: var(--text-color);
+        font-size: 0.9rem;
+        padding: 0.5rem;
+    }
+
+    .auth-links a:hover {
+        color: var(--accent-red);
+        text-decoration: none;
+    }
+
+    .auth-links .register-link {
+        color: var(--accent-red);
+        font-weight: bold;
+    }
+
+    .auth-links .username {
+        color: var(--text-color);
+        font-size: 0.9rem;
+        padding: 0.5rem;
+        border-right: 1px solid var(--border-color);
+    }
+
+    .logout-button {
+        background: none;
+        border: none;
+        color: var(--text-color);
+        cursor: pointer;
+        font-size: 0.9rem;
+        padding: 0.5rem;
+    }
+
+    .logout-button:hover {
+        color: var(--accent-red);
+        background: none;
+        text-decoration: underline;
+    }
+
+    /* === AUTH FORMS === */
+    .auth-form {
+        max-width: 400px;
+        margin: 2rem auto;
+        padding: 2rem;
+        background: var(--card-bg);
+        border: 1px solid var(--border-color);
+        
+    }
+
+    .auth-form h2 {
+        color: var(--accent-red);
+        margin-bottom: 1.5rem;
+        text-align: center;
+    }
+
+    .form-group {
+        margin-bottom: 1.5rem;
+    }
+
+    .form-group label {
+        display: block;
+        margin-bottom: 0.5rem;
+        color: var(--text-color);
+        font-weight: bold;
+        font-size: 0.9rem;
+    }
+
+    .form-group input {
+        width: 100%;
+        padding: 0.75rem;
+        background: var(--input-bg);
+        border: 1px solid var(--border-color);
+        
+        color: var(--text-color);
+        font-size: 1rem;
+    }
+
+    .form-group input:focus {
+        outline: none;
+        border-color: var(--accent-red);
+    }
+
+    /* === ERROR MESSAGES === */
+    .error-message {
+        background: rgba(221, 51, 51, 0.1);
+        border: 1px solid var(--accent-red);
+        
+        padding: 0.75rem;
+        margin-bottom: 1rem;
+        color: var(--accent-red);
+    }
+
+    /* === MOBILE RESPONSIVE OVERRIDES === */
+    @media (max-width: 768px) {
+        /* Switch to mobile layout */
+        body {
+            display: flex;
+            flex-direction: column;
+        }
+        
+        wiki-header {
+            height: auto;
+            padding: 1rem;
+        }
+        
+        wiki-header .admin {
+            position: static;
+            margin-top: 1rem;
+            justify-content: center;
+        }
+        
+        wiki-nav {
+            border-right: none;
+            border-bottom: 2px solid var(--accent-red);
+            min-height: auto;
+            padding: 0;
+        }
+        
+        wiki-nav a {
+            display: inline-block;
+            padding: 0.5rem 1rem;
+        }
+        
+        main {
+            padding: 1rem;
+        }
+        
+        .featured-grid {
+            grid-template-columns: 1fr;
+        }
+        
+        .dashboard-grid {
+            grid-template-columns: 1fr;
+        }
+        
+        .newsletter-form {
+            flex-direction: column;
+        }
+        
+        .auth-prompt .button-group {
+            flex-direction: column;
+        }
+        
+        .hero-title {
+            font-size: 1.8rem;
+        }
+    }
+
+    /* ++++++++++ splitter custom styles (themed for dark wiki) ++++++++++ */
+    .splitter-card {
+      max-width: 1400px;
+      width: 100%;
+      background: var(--card-bg);
+      border: 1px solid var(--border-color);
+      
+      box-shadow: 0 20px 40px rgba(0,0,0,0.6);
+      padding: 28px 24px;
+      margin: 0 auto;
+    }
+    h1.splitter-title {
+      font-weight: 600;
+      font-size: 2.2rem;
+      letter-spacing: -0.5px;
+      color: #fff;
+      margin: 0 0 8px 0;
+      display: flex;
+      align-items: center;
+      gap: 12px;
+    }
+    h1.splitter-title span {
+      background: var(--accent-red);
+      color: white;
+      font-size: 1rem;
+      padding: 5px 14px;
+      
+      font-weight: 400;
+    }
+    .sub {
+      color: #aaa;
+      margin-top: 0;
+      margin-bottom: 28px;
+      font-size: 1.05rem;
+      border-left: 4px solid var(--accent-red);
+      padding-left: 18px;
+    }
+    .toolbar {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 24px 32px;
+      background: var(--dark-bg);
+      
+      padding: 22px 28px;
+      margin-bottom: 32px;
+      align-items: center;
+      border: 1px solid var(--border-color);
+      box-shadow: 0 8px 18px #00000055;
+    }
+    .opt-group {
+      display: flex;
+      align-items: center;
+      gap: 16px;
+      flex-wrap: wrap;
+    }
+    .opt-item {
+      display: flex;
+      align-items: center;
+      gap: 8px;
+      background: var(--input-bg);
+      padding: 8px 18px;
+      
+      border: 1px solid var(--border-color);
+    }
+    .opt-item label {
+      font-weight: 550;
+      color: #ccc;
+    }
+    .opt-item input[type="number"] {
+      width: 75px;
+      padding: 8px 10px;
+      border: none;
+      background: #2d2d35;
+      color: white;
+      
+      font-weight: 600;
+      text-align: center;
+      box-shadow: 0 2px 6px #00000055 inset;
+      border: 1px solid #3f4450;
+    }
+    .opt-item input[type="number"]:focus {
+      outline: 2px solid var(--accent-red);
+      background: #35353d;
+    }
+    .opt-item input[type="color"] {
+      width: 48px;
+      height: 40px;
+      border: none;
+      
+      background: transparent;
+      cursor: pointer;
+      padding: 2px;
+    }
+    .radio-group {
+      display: flex;
+      gap: 18px;
+      margin-left: 10px;
+      flex-wrap: wrap;
+    }
+    .radio-group label {
+      display: flex;
+      align-items: center;
+      gap: 6px;
+      background: #2a2a32;
+      padding: 6px 18px;
+      
+      font-weight: 500;
+      color: #ddd;
+      cursor: pointer;
+      border: 1px solid #404654;
+    }
+    .radio-group label:has(input:checked) {
+      background: var(--accent-red);
+      color: white;
+      border-color: #ff8a8a;
+    }
+    #splitBtn {
+      background: var(--accent-red);
+      border: none;
+      color: white;
+      font-weight: 600;
+      padding: 14px 34px;
+      
+      font-size: 1.1rem;
+      letter-spacing: 0.3px;
+      cursor: pointer;
+      display: inline-flex;
+      align-items: center;
+      gap: 10px;
+      box-shadow: 0 10px 18px -6px #7a2a2a;
+      margin-left: auto;
+    }
+    #splitBtn:hover {
+      filter: brightness(1.15);
+      transform: scale(1.02);
+    }
+    .upload-area {
+      display: flex;
+      align-items: center;
+      background: var(--dark-bg);
+      
+      padding: 4px;
+      border: 1px solid var(--border-color);
+      margin-bottom: 30px;
+    }
+    .upload-label {
+      background: var(--hover-gray);
+      padding: 12px 26px;
+      
+      font-weight: 550;
+      color: white;
+      cursor: pointer;
+      border: 2px dashed var(--accent-red);
+    }
+    .upload-label:hover {
+      background: #2f2f39;
+    }
+    #fileInput {
+      display: none;
+    }
+    #fileName {
+      padding: 0 20px;
+      color: #bbb;
+      max-width: 200px;
+      overflow: hidden;
+      text-overflow: ellipsis;
+      white-space: nowrap;
+    }
+    .canvas-panel {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 30px;
+      justify-content: center;
+    }
+    .origin-box {
+      background: var(--dark-bg);
+      
+      padding: 20px;
+      border: 1px solid var(--border-color);
+      flex: 1 1 300px;
+    }
+    .origin-box p {
+      font-weight: 600;
+      margin: 0 0 14px 0;
+      color: #ccc;
+      padding-left: 8px;
+    }
+    .image-container {
+      display: flex;
+      justify-content: center;
+      background: #1a1a22;
+      
+      padding: 16px;
+      border: 1px solid #3a3a44;
+    }
+    #originalImg {
+      max-width: 100%;
+      max-height: 320px;
+      
+      box-shadow: 0 6px 18px black;
+      object-fit: contain;
+      background-color: #2a2a2a; /* only visible if transparent image & no bg */
+    }
+    .tiles-preview {
+      flex: 2 1 500px;
+      background: var(--dark-bg);
+      
+      padding: 22px;
+      border: 1px solid var(--border-color);
+    }
+    .preview-header {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      margin-bottom: 14px;
+      flex-wrap: wrap;
+      gap: 10px;
+    }
+    .preview-header h3 {
+      margin: 0;
+      color: white;
+      font-weight: 600;
+    }
+    #tilesGrid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(100px, 1fr));
+      gap: 14px;
+      background: #1b1b23;
+      padding: 20px;
+      
+      border: 1px solid #3f3f4c;
+      min-height: 180px;
+      justify-items: center;
+    }
+    .tile-canvas {
+      width: 100%;
+      max-width: 160px;
+      
+      box-shadow: 0 6px 14px #00000080;
+      background: #26262e; 
+      transition: 0.1s;
+      border: 3px solid #3a3a46;
+      cursor: pointer;
+    }
+    .tile-canvas:hover {
+      transform: scale(1.02);
+      border-color: var(--accent-red);
+    }
+    .action-row {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: flex-end;
+      align-items: center;
+      margin-top: 22px;
+      gap: 18px;
+      color: #aaa;
+    }
+    .download-options {
+      display: flex;
+      gap: 12px;
+      flex-wrap: wrap;
+    }
+    .download-btn {
+      background: #2a2a34;
+      padding: 12px 28px;
+      
+      font-weight: 500;
+      border: 1px solid var(--border-color);
+      color: white;
+      box-shadow: 0 6px 14px #00000055;
+      cursor: pointer;
+      font-size: 1rem;
+      display: flex;
+      align-items: center;
+      gap: 8px;
+    }
+    .download-btn#downloadAllBtn {
+      background: #1f5e3c;
+      border-color: #2e8b57;
+    }
+    .download-btn:hover {
+      filter: brightness(1.2);
+    }
+    .footer-note {
+      margin-top: 28px;
+      color: #888;
+      font-size: 0.9rem;
+      text-align: center;
+      border-top: 2px solid #2a2a35;
+      padding-top: 18px;
+    }
+  </style>
+</head>
+<body>
+  <wiki-header>
+    <h1><a href="#">🗂️ wiki<span style="color:var(--accent-red)">split</span></a></h1>
+    <p>transparent PNG support / dark theme</p>
+    <div class="admin">
+      <span class="auth-links">
+        <a href="#" class="username">guest</a>
+        <a href="#">login</a>
+        <a href="#" class="register-link">register</a>
+      </span>
+    </div>
+  </wiki-header>
+
+  <wiki-nav>
+    <a href="#" class="active">✧ splitter</a>
+    <a href="#">recent</a>
+    <a href="#">about</a>
+    <a href="#">settings</a>
+    <div class="empty">── tools ──</div>
+    <a href="#">crop</a>
+    <a href="#">resize</a>
+  </wiki-nav>
+
+  <main>
+    <div class="splitter-card">
+      <h1 class="splitter-title">🖼️ slice & dice <span>transparent PNG</span></h1>
+      <div class="sub">← grid, background (transparent if needed), fit — each tile keeps alpha</div>
+
+      <!-- toolbar with options -->
+      <div class="toolbar">
+        <div class="opt-group">
+          <div class="opt-item">
+            <label>⬜ columns</label>
+            <input type="number" id="colsInput" min="1" max="12" value="3">
+          </div>
+          <div class="opt-item">
+            <label>⬛ rows</label>
+            <input type="number" id="rowsInput" min="1" max="12" value="2">
+          </div>
+          <div class="opt-item">
+            <label>🎨 background</label>
+            <input type="color" id="bgColorInput" value="#c7dff7">
+          </div>
+        </div>
+
+        <div class="radio-group" id="fitModeGroup">
+          <label>
+            <input type="radio" name="fitMode" value="cover" checked> ⬛ cover
+          </label>
+          <label>
+            <input type="radio" name="fitMode" value="contain"> ⬜ contain
+          </label>
+          <label>
+            <input type="radio" name="fitMode" value="stretch"> 🔲 stretch
+          </label>
+        </div>
+
+        <button id="splitBtn"> ✦ SPLIT & PRESERVE ALPHA ✦ </button>
+      </div>
+
+      <!-- upload row + file name -->
+      <div class="upload-area">
+        <label for="fileInput" class="upload-label">📁 choose image (PNG transparent ok)</label>
+        <span id="fileName">no file selected</span>
+        <input type="file" id="fileInput" accept="image/png, image/jpeg, image/jpg, image/webp, image/bmp, image/gif">
+      </div>
+
+      <!-- main display: original + tile preview -->
+      <div class="canvas-panel">
+        <div class="origin-box">
+          <p>🖼️ original</p>
+          <div class="image-container">
+            <img id="originalImg" src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='300' height='200' viewBox='0 0 300 200'%3E%3Crect width='300' height='200' fill='%233f6f9f'/%3E%3Ccircle cx='150' cy='100' r='55' fill='%23ffdaaa'/%3E%3Ctext x='90' y='115' font-size='24' fill='%23222' font-weight='bold' font-family='monospace'%3Eimage%3C/text%3E%3C/svg%3E" alt="preview">
+          </div>
+        </div>
+
+        <div class="tiles-preview">
+          <div class="preview-header">
+            <h3>🧩 tiles (alpha preserved)</h3>
+            <div class="download-options">
+              <button class="download-btn" id="downloadAllBtn">⬇️ download all as ZIP</button>
+            </div>
+          </div>
+          <div id="tilesGrid">
+            <!-- dynamic tiles appear here -->
+          </div>
+          <div class="action-row">
+            <span>click any tile to download individually (PNG with transparency)</span>
+          </div>
+        </div>
+      </div>
+      <div class="footer-note">
+        💡 transparency is kept: if background color is ignored, use transparent PNG. ZIP uses JSZip.
+      </div>
+    </div>
+  </main>
+
+  <footer>
+    <p>© image splitter — transparent version · integrated wiki theme</p>
+  </footer>
+
+  <!-- JSZip for batch download -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jszip/3.10.1/jszip.min.js"></script>
+  <script>
+    (function() {
+      // ----- DOM elements -----
+      const fileInput = document.getElementById('fileInput');
+      const fileNameSpan = document.getElementById('fileName');
+      const originalImg = document.getElementById('originalImg');
+      const colsInput = document.getElementById('colsInput');
+      const rowsInput = document.getElementById('rowsInput');
+      const bgColorInput = document.getElementById('bgColorInput');
+      const splitBtn = document.getElementById('splitBtn');
+      const tilesGrid = document.getElementById('tilesGrid');
+      const fitRadios = document.getElementsByName('fitMode');
+      const downloadAllBtn = document.getElementById('downloadAllBtn');
+
+      // state
+      let currentImage = null;           // HTMLImageElement
+      let currentTiles = [];             // store canvas elements
+
+      // ----- helper: get fit mode from radio -----
+      function getSelectedFitMode() {
+        for (let radio of fitRadios) {
+          if (radio.checked) return radio.value;
+        }
+        return 'cover';
+      }
+
+      // ----- update file name on select -----
+      fileInput.addEventListener('change', (e) => {
+        const file = fileInput.files[0];
+        if (file) {
+          fileNameSpan.textContent = file.name.length > 30 ? file.name.slice(0,27)+'…' : file.name;
+          const reader = new FileReader();
+          reader.onload = (ev) => {
+            originalImg.src = ev.target.result;
+            const img = new Image();
+            img.onload = () => {
+              currentImage = img;
+            };
+            img.src = ev.target.result;
+          };
+          reader.readAsDataURL(file);
+        } else {
+          fileNameSpan.textContent = 'no file selected';
+        }
+      });
+
+      // capture placeholder image
+      function capturePlaceholderImage() {
+        if (!currentImage && originalImg.src) {
+          const img = new Image();
+          img.onload = () => { currentImage = img; };
+          img.src = originalImg.src;
+        }
+      }
+      setTimeout(capturePlaceholderImage, 100);
+      originalImg.addEventListener('load', () => {
+        if (!currentImage && originalImg.src) {
+          const img = new Image();
+          img.onload = () => { currentImage = img; };
+          img.src = originalImg.src;
+        }
+      });
+
+      // ----- function to split image and draw tiles (alpha preserved) -----
+      function performSplit() {
+        if (!currentImage) {
+          alert('⚠️ please select an image first (or wait for placeholder)');
+          return;
+        }
+
+        const cols = parseInt(colsInput.value, 10);
+        const rows = parseInt(rowsInput.value, 10);
+        if (isNaN(cols) || cols < 1 || cols > 20 || isNaN(rows) || rows < 1 || rows > 20) {
+          alert('columns and rows must be between 1 and 20');
+          return;
+        }
+
+        const bgColor = bgColorInput.value;
+        const fitMode = getSelectedFitMode();
+
+        const img = currentImage;
+        const imgWidth = img.naturalWidth;
+        const imgHeight = img.naturalHeight;
+
+        const tileW = imgWidth / cols;
+        const tileH = imgHeight / rows;
+
+        tilesGrid.innerHTML = '';
+        currentTiles = [];
+
+        for (let r = 0; r < rows; r++) {
+          for (let c = 0; c < cols; c++) {
+            const sx = c * tileW;
+            const sy = r * tileH;
+            const sWidth = tileW;
+            const sHeight = tileH;
+
+            const previewSize = 200; // px
+
+            const canvas = document.createElement('canvas');
+            canvas.width = previewSize;
+            canvas.height = previewSize;
+            const ctx = canvas.getContext('2d');
+
+            // ⭐ IMPORTANT: clear canvas to transparent, then maybe fill with background
+            ctx.clearRect(0, 0, previewSize, previewSize);
+
+            // fill background color only if user wants a solid background (we still respect alpha)
+            // but note: background color will be drawn FIRST, then image on top.
+            // However, if you want the image's transparency to show, background will be behind.
+            // For true transparency export, you can set bgColor to any color, but we draw it.
+            // To let image alpha show, you might choose a color but it will be behind.
+            // For complete transparency (checkerboard), you can still set background color, but
+            // the final PNG will have that background if you fill. If you want transparency,
+            // just set a color, but it will be there. The user can pick a color; if they want
+            // transparent background, they should use a PNG with transparency and pick a color
+            // that later they can ignore? but we fill background always (that's the option).
+            // But if we fill bgColor, the PNG will have that color, not transparent.
+            // To preserve alpha, we must NOT fill background if user wants transparency.
+            // However the option "background color" is there, so we respect it: we fill with that color.
+            // That's the intended behaviour: background color is solid. But if the image has alpha,
+            // it will blend with that background. To keep full transparency, the user would need
+            // to set background color with some alpha? we don't support alpha picker now.
+            // But for true transparent tiles, you would not want any background fill.
+           
