@@ -2,6 +2,8 @@
     {
         "id":  "squllyx",
         "name":  "SQULLYX",
+        "kind":  "fire",
+        "isLegendary":  true,
         "minGameVersion":  "1.8.77",
         "lvlTable":  [
                          {
@@ -387,6 +389,8 @@
     {
         "id":  "armadigo",
         "name":  "ARMADIGO",
+        "kind":  "fire",
+        "isLegendary":  null,
         "minGameVersion":  null,
         "lvlTable":  [
                          {
@@ -676,6 +680,8 @@
     {
         "id":  "armadrillo",
         "name":  "ARMADRILLO",
+        "kind":  "fire",
+        "isLegendary":  null,
         "minGameVersion":  "1.6.34",
         "lvlTable":  [
                          {
@@ -1037,6 +1043,8 @@
     {
         "id":  "ardrillox",
         "name":  "ARDRILLOX",
+        "kind":  "fire",
+        "isLegendary":  null,
         "minGameVersion":  "1.10.56",
         "lvlTable":  [
                          {
@@ -1378,6 +1386,8 @@
     {
         "id":  "falcano",
         "name":  "FALCANO",
+        "kind":  "fire",
+        "isLegendary":  null,
         "minGameVersion":  null,
         "lvlTable":  [
                          {
@@ -1675,6 +1685,8 @@
     {
         "id":  "falcanic",
         "name":  "FALCANIC",
+        "kind":  "fire",
+        "isLegendary":  null,
         "minGameVersion":  "1.6.34",
         "lvlTable":  [
                          {
@@ -2032,6 +2044,8 @@
     {
         "id":  "falcongfu",
         "name":  "FALCONGFU",
+        "kind":  "fire",
+        "isLegendary":  null,
         "minGameVersion":  "1.10.35",
         "lvlTable":  [
                          {
@@ -2401,6 +2415,8 @@
     {
         "id":  "flarion",
         "name":  "FLARION",
+        "kind":  "fire",
+        "isLegendary":  null,
         "minGameVersion":  "1.10.65",
         "lvlTable":  [
                          {
@@ -2738,6 +2754,8 @@
     {
         "id":  "flameon",
         "name":  "FLAMEON",
+        "kind":  "fire",
+        "isLegendary":  null,
         "minGameVersion":  "1.8.77",
         "lvlTable":  [
                          {
@@ -3107,6 +3125,8 @@
     {
         "id":  "flameonyx",
         "name":  "FLAMEONYX",
+        "kind":  "fire",
+        "isLegendary":  null,
         "minGameVersion":  "1.9.56",
         "lvlTable":  [
                          {
@@ -3500,6 +3520,8 @@
     {
         "id":  "hopchop",
         "name":  "HOPCHOP",
+        "kind":  "fire",
+        "isLegendary":  null,
         "minGameVersion":  null,
         "lvlTable":  [
                          {
@@ -3797,6 +3819,8 @@
     {
         "id":  "baniblaze",
         "name":  "BANIBLAZE",
+        "kind":  "fire",
+        "isLegendary":  null,
         "minGameVersion":  "1.7.29",
         "lvlTable":  [
                          {
@@ -4154,6 +4178,8 @@
     {
         "id":  "lapinaf",
         "name":  "LAPINAF",
+        "kind":  "fire",
+        "isLegendary":  null,
         "minGameVersion":  "1.7.29",
         "lvlTable":  [
                          {
@@ -4543,6 +4569,8 @@
     {
         "id":  "hopchop_snow",
         "name":  "HOPCHOP",
+        "kind":  "fire",
+        "isLegendary":  null,
         "minGameVersion":  "1.8.96",
         "lvlTable":  [
                          {
@@ -4848,6 +4876,8 @@
     {
         "id":  "baniblaze_snow",
         "name":  "BANIBLAZE",
+        "kind":  "fire",
+        "isLegendary":  null,
         "minGameVersion":  "1.8.96",
         "lvlTable":  [
                          {
@@ -5229,6 +5259,8 @@
     {
         "id":  "lapinaf_snow",
         "name":  "LAPINAF",
+        "kind":  "fire",
+        "isLegendary":  null,
         "minGameVersion":  "1.8.96",
         "lvlTable":  [
                          {
@@ -5630,6 +5662,8 @@
     {
         "id":  "kitnex",
         "name":  "SPARKAT",
+        "kind":  "fire",
+        "isLegendary":  null,
         "minGameVersion":  null,
         "lvlTable":  [
                          {
@@ -5967,6 +6001,8 @@
     {
         "id":  "sparkune",
         "name":  "SPARKUNE",
+        "kind":  "fire",
+        "isLegendary":  null,
         "minGameVersion":  "1.6.48",
         "lvlTable":  [
                          {
@@ -6336,6 +6372,8 @@
     {
         "id":  "sparkunycus",
         "name":  "SPARKUNYCUS",
+        "kind":  "fire",
+        "isLegendary":  null,
         "minGameVersion":  "1.10.21",
         "lvlTable":  [
                          {
@@ -6701,6 +6739,8 @@
     {
         "id":  "lavapede",
         "name":  "LAVAPEDE",
+        "kind":  "fire",
+        "isLegendary":  null,
         "minGameVersion":  null,
         "lvlTable":  [
                          {
@@ -7034,6 +7074,8 @@
     {
         "id":  "lapre",
         "name":  "LAPRE",
+        "kind":  "fire",
+        "isLegendary":  null,
         "minGameVersion":  "1.6.37",
         "lvlTable":  [
                          {
@@ -7395,6 +7437,8 @@
     {
         "id":  "lavalanto",
         "name":  "LAVALANTO",
+        "kind":  "fire",
+        "isLegendary":  null,
         "minGameVersion":  "1.9.84",
         "lvlTable":  [
                          {
@@ -7748,6 +7792,8 @@
     {
         "id":  "menza",
         "name":  "MENZA",
+        "kind":  "fire",
+        "isLegendary":  null,
         "minGameVersion":  null,
         "lvlTable":  [
                          {
@@ -8085,6 +8131,8 @@
     {
         "id":  "pangrill",
         "name":  "PANGRILL",
+        "kind":  "fire",
+        "isLegendary":  null,
         "minGameVersion":  "1.6.57",
         "lvlTable":  [
                          {
@@ -8458,6 +8506,8 @@
     {
         "id":  "fierodor",
         "name":  "FIERODOR",
+        "kind":  "fire",
+        "isLegendary":  null,
         "minGameVersion":  "1.6.57",
         "lvlTable":  [
                          {
@@ -8843,6 +8893,8 @@
     {
         "id":  "menza_snow",
         "name":  "MENZA",
+        "kind":  "fire",
+        "isLegendary":  null,
         "minGameVersion":  "1.7.15",
         "lvlTable":  [
                          {
@@ -9184,6 +9236,8 @@
     {
         "id":  "pangrill_snow",
         "name":  "PANGRILL",
+        "kind":  "fire",
+        "isLegendary":  null,
         "minGameVersion":  "1.7.15",
         "lvlTable":  [
                          {
@@ -9569,6 +9623,8 @@
     {
         "id":  "fierodor_snow",
         "name":  "FIERODOR",
+        "kind":  "fire",
+        "isLegendary":  null,
         "minGameVersion":  "1.7.15",
         "lvlTable":  [
                          {
@@ -9974,6 +10030,8 @@
     {
         "id":  "pyropine",
         "name":  "PYROPINE",
+        "kind":  "fire",
+        "isLegendary":  null,
         "minGameVersion":  null,
         "lvlTable":  [
                          {
@@ -10311,6 +10369,8 @@
     {
         "id":  "spyropine",
         "name":  "SPYROPINE",
+        "kind":  "fire",
+        "isLegendary":  null,
         "minGameVersion":  "1.6.48",
         "lvlTable":  [
                          {
@@ -10680,6 +10740,8 @@
     {
         "id":  "fyropine",
         "name":  "FYROPINE",
+        "kind":  "fire",
+        "isLegendary":  null,
         "minGameVersion":  "1.10.09",
         "lvlTable":  [
                          {
@@ -11025,6 +11087,8 @@
     {
         "id":  "rexaroo",
         "name":  "REXAROO",
+        "kind":  "fire",
+        "isLegendary":  null,
         "minGameVersion":  null,
         "lvlTable":  [
                          {
@@ -11358,6 +11422,8 @@
     {
         "id":  "riptor",
         "name":  "RIPTOR",
+        "kind":  "fire",
+        "isLegendary":  null,
         "minGameVersion":  "1.6.62",
         "lvlTable":  [
                          {
@@ -11723,6 +11789,8 @@
     {
         "id":  "pyrosaur",
         "name":  "PYROSAUR",
+        "kind":  "fire",
+        "isLegendary":  null,
         "minGameVersion":  "1.6.62",
         "lvlTable":  [
                          {
@@ -12096,6 +12164,8 @@
     {
         "id":  "fire_egg",
         "name":  "FIRE EGG",
+        "kind":  "fire",
+        "isLegendary":  true,
         "minGameVersion":  "1.7.96",
         "lvlTable":  [
                          {
@@ -12389,6 +12459,8 @@
     {
         "id":  "baby_krimson",
         "name":  "BABY FIRE",
+        "kind":  "fire",
+        "isLegendary":  true,
         "minGameVersion":  "1.7.96",
         "lvlTable":  [
                          {
@@ -12686,6 +12758,8 @@
     {
         "id":  "krimson",
         "name":  "KRIMSON",
+        "kind":  "fire",
+        "isLegendary":  true,
         "minGameVersion":  "1.8.77",
         "lvlTable":  [
                          {
@@ -13035,6 +13109,8 @@
     {
         "id":  "auburn",
         "name":  "AUBURN",
+        "kind":  "fire",
+        "isLegendary":  true,
         "minGameVersion":  "1.8.77",
         "lvlTable":  [
                          {
@@ -13392,6 +13468,8 @@
     {
         "id":  "volcarnyx",
         "name":  "VOLCARNYX",
+        "kind":  "fire",
+        "isLegendary":  true,
         "minGameVersion":  "1.10.64",
         "lvlTable":  [
                          {
@@ -13771,6 +13849,8 @@
     {
         "id":  "robocanyx",
         "name":  "ROBOCANYX",
+        "kind":  "fire",
+        "isLegendary":  true,
         "minGameVersion":  "1.10.92",
         "lvlTable":  [
                          {
@@ -14160,6 +14240,8 @@
     {
         "id":  "flamboar",
         "name":  "FLAMBOAR",
+        "kind":  "fire",
+        "isLegendary":  null,
         "minGameVersion":  null,
         "lvlTable":  [
                          {
@@ -14497,6 +14579,8 @@
     {
         "id":  "boarbaque",
         "name":  "BOARBAQUE",
+        "kind":  "fire",
+        "isLegendary":  null,
         "minGameVersion":  "1.6.33",
         "lvlTable":  [
                          {
@@ -14846,6 +14930,8 @@
     {
         "id":  "haboar",
         "name":  "HABOAR",
+        "kind":  "fire",
+        "isLegendary":  null,
         "minGameVersion":  "1.6.70",
         "lvlTable":  [
                          {
@@ -15235,6 +15321,8 @@
     {
         "id":  "torchip",
         "name":  "TORCHIP",
+        "kind":  "fire",
+        "isLegendary":  null,
         "minGameVersion":  null,
         "lvlTable":  [
                          {
@@ -15572,6 +15660,8 @@
     {
         "id":  "scorchite",
         "name":  "SCORCHITE",
+        "kind":  "fire",
+        "isLegendary":  null,
         "minGameVersion":  "1.6.35",
         "lvlTable":  [
                          {
@@ -15933,6 +16023,8 @@
     {
         "id":  "scarnyx",
         "name":  "SCARNYX",
+        "kind":  "fire",
+        "isLegendary":  null,
         "minGameVersion":  "1.9.56",
         "lvlTable":  [
                          {
@@ -16330,6 +16422,8 @@
     {
         "id":  "lionydys",
         "name":  "LIONYDYS",
+        "kind":  "fire",
+        "isLegendary":  true,
         "minGameVersion":  "1.8.99",
         "lvlTable":  [
                          {
@@ -16723,6 +16817,8 @@
     {
         "id":  "eelonyx",
         "name":  "EELONYX",
+        "kind":  "water",
+        "isLegendary":  true,
         "minGameVersion":  "1.8.87",
         "lvlTable":  [
                          {
@@ -17096,6 +17192,8 @@
     {
         "id":  "yetyxar",
         "name":  "YETYXAR",
+        "kind":  "water",
+        "isLegendary":  true,
         "minGameVersion":  "1.11.01",
         "lvlTable":  [
                          {
@@ -17469,6 +17567,8 @@
     {
         "id":  "topaz_jerbo",
         "name":  "TOPAZ JERBO",
+        "kind":  "water",
+        "isLegendary":  null,
         "minGameVersion":  "1.6.32",
         "lvlTable":  [
                          {
@@ -17806,6 +17906,8 @@
     {
         "id":  "jerboozle",
         "name":  "JERBOOZLE",
+        "kind":  "water",
+        "isLegendary":  null,
         "minGameVersion":  "1.6.48",
         "lvlTable":  [
                          {
@@ -18183,6 +18285,8 @@
     {
         "id":  "aviatos",
         "name":  "AVIATOS",
+        "kind":  "earth",
+        "isLegendary":  null,
         "minGameVersion":  null,
         "lvlTable":  [
                          {
@@ -18520,6 +18624,8 @@
     {
         "id":  "fligoss",
         "name":  "FLIGOSS",
+        "kind":  "earth",
+        "isLegendary":  null,
         "minGameVersion":  "1.6.35",
         "lvlTable":  [
                          {
@@ -18889,6 +18995,8 @@
     {
         "id":  "flianys",
         "name":  "FLIANYS",
+        "kind":  "earth",
+        "isLegendary":  null,
         "minGameVersion":  "1.10.61",
         "lvlTable":  [
                          {
@@ -19222,6 +19330,8 @@
     {
         "id":  "grubble",
         "name":  "GRUBBLE",
+        "kind":  "earth",
+        "isLegendary":  null,
         "minGameVersion":  null,
         "lvlTable":  [
                          {
@@ -19555,6 +19665,8 @@
     {
         "id":  "dynabug",
         "name":  "DYNABUG",
+        "kind":  "earth",
+        "isLegendary":  null,
         "minGameVersion":  "1.7.28",
         "lvlTable":  [
                          {
@@ -19912,6 +20024,8 @@
     {
         "id":  "dyxarix",
         "name":  "DYXARIX",
+        "kind":  "earth",
+        "isLegendary":  null,
         "minGameVersion":  "1.7.28",
         "lvlTable":  [
                          {
@@ -20301,6 +20415,8 @@
     {
         "id":  "gryphon",
         "name":  "GRYPHON",
+        "kind":  "fire",
+        "isLegendary":  true,
         "minGameVersion":  "1.6.32",
         "lvlTable":  [
                          {
@@ -20638,6 +20754,8 @@
     {
         "id":  "gryphoenix",
         "name":  "GRYPHOENIX",
+        "kind":  "fire",
+        "isLegendary":  true,
         "minGameVersion":  "1.6.42",
         "lvlTable":  [
                          {
@@ -20999,6 +21117,8 @@
     {
         "id":  "gryphynos",
         "name":  "GRYPHYNOS",
+        "kind":  "fire",
+        "isLegendary":  true,
         "minGameVersion":  "1.8.77",
         "lvlTable":  [
                          {
@@ -21400,6 +21520,8 @@
     {
         "id":  "jeempy",
         "name":  "JEEMPY",
+        "kind":  "earth",
+        "isLegendary":  null,
         "minGameVersion":  null,
         "lvlTable":  [
                          {
@@ -21733,6 +21855,8 @@
     {
         "id":  "jempking",
         "name":  "JEMPKING",
+        "kind":  "earth",
+        "isLegendary":  null,
         "minGameVersion":  "1.6.48",
         "lvlTable":  [
                          {
@@ -22098,6 +22222,8 @@
     {
         "id":  "jeeforz",
         "name":  "JEEFORZ",
+        "kind":  "earth",
+        "isLegendary":  null,
         "minGameVersion":  "1.9.93",
         "lvlTable":  [
                          {
@@ -22451,6 +22577,8 @@
     {
         "id":  "leafrog",
         "name":  "LEAFROG",
+        "kind":  "earth",
+        "isLegendary":  null,
         "minGameVersion":  null,
         "lvlTable":  [
                          {
@@ -22800,6 +22928,8 @@
     {
         "id":  "vertoad",
         "name":  "VERTOAD",
+        "kind":  "earth",
+        "isLegendary":  null,
         "minGameVersion":  "1.6.48",
         "lvlTable":  [
                          {
@@ -23161,6 +23291,8 @@
     {
         "id":  "toadaryx",
         "name":  "TOADARYX",
+        "kind":  "earth",
+        "isLegendary":  null,
         "minGameVersion":  "1.9.47",
         "lvlTable":  [
                          {
@@ -23502,6 +23634,8 @@
     {
         "id":  "nintoise",
         "name":  "NINTOISE",
+        "kind":  "earth",
+        "isLegendary":  null,
         "minGameVersion":  null,
         "lvlTable":  [
                          {
@@ -23839,6 +23973,8 @@
     {
         "id":  "turtylo",
         "name":  "TURTYLO",
+        "kind":  "earth",
+        "isLegendary":  null,
         "minGameVersion":  "1.6.48",
         "lvlTable":  [
                          {
@@ -24204,6 +24340,8 @@
     {
         "id":  "znarlyx",
         "name":  "ZNARLYX",
+        "kind":  "earth",
+        "isLegendary":  null,
         "minGameVersion":  "1.6.57",
         "lvlTable":  [
                          {
@@ -24581,6 +24719,8 @@
     {
         "id":  "pumpking",
         "name":  "PUMPKING",
+        "kind":  "earth",
+        "isLegendary":  null,
         "minGameVersion":  null,
         "lvlTable":  [
                          {
@@ -24918,6 +25058,8 @@
     {
         "id":  "pumpress",
         "name":  "PUMPRESS",
+        "kind":  "earth",
+        "isLegendary":  null,
         "minGameVersion":  "1.6.34",
         "lvlTable":  [
                          {
@@ -25267,6 +25409,8 @@
     {
         "id":  "quacko",
         "name":  "QUACKO",
+        "kind":  "earth",
+        "isLegendary":  null,
         "minGameVersion":  null,
         "lvlTable":  [
                          {
@@ -25604,6 +25748,8 @@
     {
         "id":  "platypad",
         "name":  "PLATYPAD",
+        "kind":  "earth",
+        "isLegendary":  null,
         "minGameVersion":  "1.6.62",
         "lvlTable":  [
                          {
@@ -25961,6 +26107,8 @@
     {
         "id":  "platagon",
         "name":  "PLATAGON",
+        "kind":  "earth",
+        "isLegendary":  null,
         "minGameVersion":  "1.6.62",
         "lvlTable":  [
                          {
@@ -26326,6 +26474,8 @@
     {
         "id":  "tacofox",
         "name":  "FENECORN",
+        "kind":  "earth",
+        "isLegendary":  null,
         "minGameVersion":  null,
         "lvlTable":  [
                          {
@@ -26663,6 +26813,8 @@
     {
         "id":  "elvee",
         "name":  "ELVEE",
+        "kind":  "earth",
+        "isLegendary":  null,
         "minGameVersion":  "1.6.33",
         "lvlTable":  [
                          {
@@ -27024,6 +27176,8 @@
     {
         "id":  "elveelyx",
         "name":  "ELVEELYX",
+        "kind":  "earth",
+        "isLegendary":  null,
         "minGameVersion":  "1.9.56",
         "lvlTable":  [
                          {
@@ -27417,6 +27571,8 @@
     {
         "id":  "tuffnut",
         "name":  "TUFFNUT",
+        "kind":  "earth",
+        "isLegendary":  null,
         "minGameVersion":  null,
         "lvlTable":  [
                          {
@@ -27750,6 +27906,8 @@
     {
         "id":  "jubipod",
         "name":  "JUBIPOD",
+        "kind":  "earth",
+        "isLegendary":  null,
         "minGameVersion":  "1.6.33",
         "lvlTable":  [
                          {
@@ -28099,6 +28257,8 @@
     {
         "id":  "tufaryx",
         "name":  "TUFARYX",
+        "kind":  "earth",
+        "isLegendary":  null,
         "minGameVersion":  "1.9.97",
         "lvlTable":  [
                          {
@@ -28448,6 +28608,8 @@
     {
         "id":  "evren",
         "name":  "EVREN",
+        "kind":  "earth",
+        "isLegendary":  true,
         "minGameVersion":  "1.8.90",
         "lvlTable":  [
                          {
@@ -28817,6 +28979,8 @@
     {
         "id":  "crocynos",
         "name":  "CROCYNOS",
+        "kind":  "earth",
+        "isLegendary":  true,
         "minGameVersion":  "1.11.14",
         "lvlTable":  [
                          {
@@ -29182,6 +29346,8 @@
     {
         "id":  "thornder",
         "name":  "THORNDER",
+        "kind":  "elec",
+        "isLegendary":  null,
         "minGameVersion":  "1.6.32",
         "lvlTable":  [
                          {
@@ -29523,6 +29689,8 @@
     {
         "id":  "bodin",
         "name":  "BODIN",
+        "kind":  "elec",
+        "isLegendary":  null,
         "minGameVersion":  "1.6.35",
         "lvlTable":  [
                          {
@@ -29884,6 +30052,8 @@
     {
         "id":  "tauruzyx",
         "name":  "TAURUZYX",
+        "kind":  "elec",
+        "isLegendary":  null,
         "minGameVersion":  "1.9.61",
         "lvlTable":  [
                          {
@@ -30249,6 +30419,8 @@
     {
         "id":  "malakite_egg",
         "name":  "EARTH EGG",
+        "kind":  "earth",
+        "isLegendary":  true,
         "minGameVersion":  "1.7.90",
         "lvlTable":  [
                          {
@@ -30542,6 +30714,8 @@
     {
         "id":  "baby_malakite",
         "name":  "EARTH BABY",
+        "kind":  "earth",
+        "isLegendary":  true,
         "minGameVersion":  "1.7.90",
         "lvlTable":  [
                          {
@@ -30843,6 +31017,8 @@
     {
         "id":  "malakite",
         "name":  "MALAKITE",
+        "kind":  "earth",
+        "isLegendary":  true,
         "minGameVersion":  "1.8.77",
         "lvlTable":  [
                          {
@@ -31180,6 +31356,8 @@
     {
         "id":  "sardonyx",
         "name":  "SARDONYX",
+        "kind":  "earth",
+        "isLegendary":  true,
         "minGameVersion":  "1.8.77",
         "lvlTable":  [
                          {
@@ -31537,6 +31715,8 @@
     {
         "id":  "sauryx",
         "name":  "SAURYX",
+        "kind":  "earth",
+        "isLegendary":  true,
         "minGameVersion":  "1.10.72",
         "lvlTable":  [
                          {
@@ -31901,6 +32081,8 @@
     {
         "id":  "dreq",
         "name":  "DREQ",
+        "kind":  "fire",
+        "isLegendary":  true,
         "minGameVersion":  "1.8.77",
         "lvlTable":  [
                          {
@@ -32258,6 +32440,8 @@
     {
         "id":  "dreqador",
         "name":  "DREQADOR",
+        "kind":  "fire",
+        "isLegendary":  true,
         "minGameVersion":  "1.8.77",
         "lvlTable":  [
                          {
@@ -32663,6 +32847,8 @@
     {
         "id":  "dreqorus",
         "name":  "DREQORUS",
+        "kind":  "fire",
+        "isLegendary":  true,
         "minGameVersion":  "1.8.77",
         "lvlTable":  [
                          {
@@ -33096,6 +33282,8 @@
     {
         "id":  "bearmoryx",
         "name":  "BEARMORYX",
+        "kind":  "dark",
+        "isLegendary":  true,
         "minGameVersion":  "1.11.09",
         "lvlTable":  [
                          {
@@ -33448,6 +33636,8 @@
     {
         "id":  "embera",
         "name":  "EMBERA",
+        "kind":  "fire",
+        "isLegendary":  null,
         "minGameVersion":  "1.10.40",
         "lvlTable":  [
                          {
@@ -33809,6 +33999,8 @@
     {
         "id":  "embaryx",
         "name":  "EMBARYX",
+        "kind":  "fire",
+        "isLegendary":  null,
         "minGameVersion":  "1.10.40",
         "lvlTable":  [
                          {
@@ -34186,6 +34378,8 @@
     {
         "id":  "moltalor",
         "name":  "MOLTALOR",
+        "kind":  "fire",
+        "isLegendary":  null,
         "minGameVersion":  "1.6.41",
         "lvlTable":  [
                          {
@@ -34547,6 +34741,8 @@
     {
         "id":  "moltalox",
         "name":  "MOLTALOX",
+        "kind":  "fire",
+        "isLegendary":  null,
         "minGameVersion":  "1.8.01",
         "lvlTable":  [
                          {
@@ -34916,6 +35112,8 @@
     {
         "id":  "moltanyx",
         "name":  "MOLTANYX",
+        "kind":  "fire",
+        "isLegendary":  null,
         "minGameVersion":  "1.8.01",
         "lvlTable":  [
                          {
@@ -35297,6 +35495,8 @@
     {
         "id":  "tuffire",
         "name":  "TUFFIRE",
+        "kind":  "fire",
+        "isLegendary":  null,
         "minGameVersion":  "1.6.41",
         "lvlTable":  [
                          {
@@ -35658,6 +35858,8 @@
     {
         "id":  "jubifero",
         "name":  "JUBIFERO",
+        "kind":  "fire",
+        "isLegendary":  null,
         "minGameVersion":  "1.7.43",
         "lvlTable":  [
                          {
@@ -36043,6 +36245,8 @@
     {
         "id":  "jubiferyx",
         "name":  "JUBIFERYX",
+        "kind":  "fire",
+        "isLegendary":  null,
         "minGameVersion":  "1.7.43",
         "lvlTable":  [
                          {
@@ -36440,6 +36644,8 @@
     {
         "id":  "flowingo",
         "name":  "FLOWINGO",
+        "kind":  "earth",
+        "isLegendary":  null,
         "minGameVersion":  null,
         "lvlTable":  [
                          {
@@ -36777,6 +36983,8 @@
     {
         "id":  "gomingo",
         "name":  "GOMINGO",
+        "kind":  "earth",
+        "isLegendary":  null,
         "minGameVersion":  "1.6.33",
         "lvlTable":  [
                          {
@@ -37138,6 +37346,8 @@
     {
         "id":  "flowmigona",
         "name":  "FLOWMIGONA",
+        "kind":  "earth",
+        "isLegendary":  null,
         "minGameVersion":  "1.9.67",
         "lvlTable":  [
                          {
@@ -37495,6 +37705,8 @@
     {
         "id":  "kikflick",
         "name":  "KIKFLICK",
+        "kind":  "earth",
+        "isLegendary":  null,
         "minGameVersion":  null,
         "lvlTable":  [
                          {
@@ -37832,6 +38044,8 @@
     {
         "id":  "dropkola",
         "name":  "DROPKOLA",
+        "kind":  "earth",
+        "isLegendary":  null,
         "minGameVersion":  "1.6.34",
         "lvlTable":  [
                          {
@@ -38193,6 +38407,8 @@
     {
         "id":  "dropkolyx",
         "name":  "DROPKOLYX",
+        "kind":  "earth",
+        "isLegendary":  null,
         "minGameVersion":  "1.7.59",
         "lvlTable":  [
                          {
@@ -38578,6 +38794,8 @@
     {
         "id":  "grubble_snow",
         "name":  "#GRUBBLE",
+        "kind":  "water",
+        "isLegendary":  null,
         "minGameVersion":  null,
         "lvlTable":  [
                          {
@@ -38911,6 +39129,8 @@
     {
         "id":  "dynaski",
         "name":  "DYNASKI",
+        "kind":  "water",
+        "isLegendary":  null,
         "minGameVersion":  "1.7.27",
         "lvlTable":  [
                          {
@@ -39268,6 +39488,8 @@
     {
         "id":  "naxarix",
         "name":  "NAXARIX",
+        "kind":  "water",
+        "isLegendary":  null,
         "minGameVersion":  "1.7.27",
         "lvlTable":  [
                          {
@@ -39657,6 +39879,8 @@
     {
         "id":  "duckron",
         "name":  "DUXEDO",
+        "kind":  "water",
+        "isLegendary":  null,
         "minGameVersion":  null,
         "lvlTable":  [
                          {
@@ -39990,6 +40214,8 @@
     {
         "id":  "aquadux",
         "name":  "AQUADUX",
+        "kind":  "water",
+        "isLegendary":  null,
         "minGameVersion":  "1.6.33",
         "lvlTable":  [
                          {
@@ -40339,6 +40565,8 @@
     {
         "id":  "duxnite",
         "name":  "DUXNITE",
+        "kind":  "water",
+        "isLegendary":  null,
         "minGameVersion":  "1.6.67",
         "lvlTable":  [
                          {
@@ -40724,6 +40952,8 @@
     {
         "id":  "hydron",
         "name":  "HYDRON",
+        "kind":  "water",
+        "isLegendary":  null,
         "minGameVersion":  null,
         "lvlTable":  [
                          {
@@ -41057,6 +41287,8 @@
     {
         "id":  "tentapod",
         "name":  "TENTAPOD",
+        "kind":  "water",
+        "isLegendary":  null,
         "minGameVersion":  "1.6.62",
         "lvlTable":  [
                          {
@@ -41422,6 +41654,8 @@
     {
         "id":  "hydroza",
         "name":  "HYDROZA",
+        "kind":  "water",
+        "isLegendary":  null,
         "minGameVersion":  "1.6.62",
         "lvlTable":  [
                          {
@@ -41795,6 +42029,8 @@
     {
         "id":  "lampion",
         "name":  "LAMPION",
+        "kind":  "water",
+        "isLegendary":  null,
         "minGameVersion":  null,
         "lvlTable":  [
                          {
@@ -42132,6 +42368,8 @@
     {
         "id":  "surfant",
         "name":  "SURFANT",
+        "kind":  "water",
+        "isLegendary":  null,
         "minGameVersion":  "1.6.42",
         "lvlTable":  [
                          {
@@ -42493,6 +42731,8 @@
     {
         "id":  "hydragon",
         "name":  "HYDRAGON",
+        "kind":  "water",
+        "isLegendary":  null,
         "minGameVersion":  "1.6.57",
         "lvlTable":  [
                          {
@@ -42866,6 +43106,8 @@
     {
         "id":  "pengu",
         "name":  "PENGOO",
+        "kind":  "water",
+        "isLegendary":  null,
         "minGameVersion":  null,
         "lvlTable":  [
                          {
@@ -43203,6 +43445,8 @@
     {
         "id":  "nootnoot",
         "name":  "NOOTNOOT",
+        "kind":  "water",
+        "isLegendary":  null,
         "minGameVersion":  "1.6.57",
         "lvlTable":  [
                          {
@@ -43564,6 +43808,8 @@
     {
         "id":  "empengon",
         "name":  "EMPENGON",
+        "kind":  "water",
+        "isLegendary":  null,
         "minGameVersion":  "1.6.57",
         "lvlTable":  [
                          {
@@ -43937,6 +44183,8 @@
     {
         "id":  "podapod",
         "name":  "PODAPOD",
+        "kind":  "water",
+        "isLegendary":  null,
         "minGameVersion":  null,
         "lvlTable":  [
                          {
@@ -44270,6 +44518,8 @@
     {
         "id":  "podness",
         "name":  "PODNESS",
+        "kind":  "water",
+        "isLegendary":  null,
         "minGameVersion":  "1.6.33",
         "lvlTable":  [
                          {
@@ -44619,6 +44869,8 @@
     {
         "id":  "shellby",
         "name":  "SHELLBY",
+        "kind":  "water",
+        "isLegendary":  null,
         "minGameVersion":  null,
         "lvlTable":  [
                          {
@@ -44952,6 +45204,8 @@
     {
         "id":  "gemish",
         "name":  "GEMISH",
+        "kind":  "water",
+        "isLegendary":  null,
         "minGameVersion":  "1.6.35",
         "lvlTable":  [
                          {
@@ -45301,6 +45555,8 @@
     {
         "id":  "crabodox",
         "name":  "CRABODOX",
+        "kind":  "water",
+        "isLegendary":  null,
         "minGameVersion":  "1.10.25",
         "lvlTable":  [
                          {
@@ -45646,6 +45902,8 @@
     {
         "id":  "tailton",
         "name":  "TAILTON",
+        "kind":  "water",
+        "isLegendary":  null,
         "minGameVersion":  null,
         "lvlTable":  [
                          {
@@ -45983,6 +46241,8 @@
     {
         "id":  "maankey",
         "name":  "MAANKEY",
+        "kind":  "water",
+        "isLegendary":  null,
         "minGameVersion":  "1.6.37",
         "lvlTable":  [
                          {
@@ -46332,6 +46592,8 @@
     {
         "id":  "maangoryx",
         "name":  "MAANGORYX",
+        "kind":  "water",
+        "isLegendary":  null,
         "minGameVersion":  "1.9.54",
         "lvlTable":  [
                          {
@@ -46693,6 +46955,8 @@
     {
         "id":  "vulfrost",
         "name":  "VULFROST",
+        "kind":  "water",
+        "isLegendary":  null,
         "minGameVersion":  null,
         "lvlTable":  [
                          {
@@ -47030,6 +47294,8 @@
     {
         "id":  "vullard",
         "name":  "VULLARD",
+        "kind":  "water",
+        "isLegendary":  null,
         "minGameVersion":  "1.6.48",
         "lvlTable":  [
                          {
@@ -47391,6 +47657,8 @@
     {
         "id":  "vullardon",
         "name":  "VULLARDON",
+        "kind":  "water",
+        "isLegendary":  null,
         "minGameVersion":  "1.10.15",
         "lvlTable":  [
                          {
@@ -47752,6 +48020,8 @@
     {
         "id":  "winger",
         "name":  "WINGER",
+        "kind":  "water",
+        "isLegendary":  null,
         "minGameVersion":  null,
         "lvlTable":  [
                          {
@@ -48089,6 +48359,8 @@
     {
         "id":  "wingrizzle",
         "name":  "WINGRIZZLE",
+        "kind":  "water",
+        "isLegendary":  null,
         "minGameVersion":  "1.6.37",
         "lvlTable":  [
                          {
@@ -48438,6 +48710,8 @@
     {
         "id":  "wingronox",
         "name":  "WINGRONOX",
+        "kind":  "water",
+        "isLegendary":  null,
         "minGameVersion":  "1.10.18",
         "lvlTable":  [
                          {
@@ -48795,6 +49069,8 @@
     {
         "id":  "kobalt_egg",
         "name":  "WATER EGG",
+        "kind":  "water",
+        "isLegendary":  true,
         "minGameVersion":  "1.7.90",
         "lvlTable":  [
                          {
@@ -49088,6 +49364,8 @@
     {
         "id":  "baby_kobalt",
         "name":  "WATER BABY",
+        "kind":  "water",
+        "isLegendary":  true,
         "minGameVersion":  "1.7.90",
         "lvlTable":  [
                          {
@@ -49393,6 +49671,8 @@
     {
         "id":  "kobalt",
         "name":  "KOBALT",
+        "kind":  "water",
+        "isLegendary":  true,
         "minGameVersion":  "1.8.77",
         "lvlTable":  [
                          {
@@ -49730,6 +50010,8 @@
     {
         "id":  "aragonite",
         "name":  "ARAGONITE",
+        "kind":  "water",
+        "isLegendary":  true,
         "minGameVersion":  "1.8.77",
         "lvlTable":  [
                          {
@@ -50079,6 +50361,8 @@
     {
         "id":  "aragonyx",
         "name":  "ARAGONYX",
+        "kind":  "water",
+        "isLegendary":  true,
         "minGameVersion":  "1.10.97",
         "lvlTable":  [
                          {
@@ -50439,6 +50723,8 @@
     {
         "id":  "sluglug",
         "name":  "SLUGLUG",
+        "kind":  "water",
+        "isLegendary":  null,
         "minGameVersion":  null,
         "lvlTable":  [
                          {
@@ -50772,6 +51058,8 @@
     {
         "id":  "slail",
         "name":  "SLAIL",
+        "kind":  "water",
+        "isLegendary":  null,
         "minGameVersion":  "1.6.48",
         "lvlTable":  [
                          {
@@ -51137,6 +51425,8 @@
     {
         "id":  "slailoxa",
         "name":  "SLAILOXA",
+        "kind":  "water",
+        "isLegendary":  null,
         "minGameVersion":  "1.10.04",
         "lvlTable":  [
                          {
@@ -51490,6 +51780,8 @@
     {
         "id":  "snorky",
         "name":  "SNORKY",
+        "kind":  "water",
+        "isLegendary":  null,
         "minGameVersion":  null,
         "lvlTable":  [
                          {
@@ -51827,6 +52119,8 @@
     {
         "id":  "snorkoth",
         "name":  "SNORKOTH",
+        "kind":  "water",
+        "isLegendary":  null,
         "minGameVersion":  "1.6.57",
         "lvlTable":  [
                          {
@@ -52188,6 +52482,8 @@
     {
         "id":  "hydraphant",
         "name":  "HYDRAPHANT",
+        "kind":  "water",
+        "isLegendary":  null,
         "minGameVersion":  "1.9.56",
         "lvlTable":  [
                          {
@@ -52561,6 +52857,8 @@
     {
         "id":  "glixie",
         "name":  "GLIXIE",
+        "kind":  "water",
+        "isLegendary":  true,
         "minGameVersion":  null,
         "lvlTable":  [
                          {
@@ -52902,6 +53200,8 @@
     {
         "id":  "glixeidon",
         "name":  "GLIXEIDON",
+        "kind":  "water",
+        "isLegendary":  true,
         "minGameVersion":  "1.6.45",
         "lvlTable":  [
                          {
@@ -53267,6 +53567,8 @@
     {
         "id":  "glixonyx",
         "name":  "GLIXONYX",
+        "kind":  "water",
+        "isLegendary":  true,
         "minGameVersion":  "1.11.02",
         "lvlTable":  [
                          {
@@ -53635,6 +53937,8 @@
     {
         "id":  "tazer",
         "name":  "TAZER",
+        "kind":  "elec",
+        "isLegendary":  null,
         "minGameVersion":  null,
         "lvlTable":  [
                          {
@@ -53972,6 +54276,8 @@
     {
         "id":  "boltage",
         "name":  "BOLTAGE",
+        "kind":  "elec",
+        "isLegendary":  null,
         "minGameVersion":  "1.6.35",
         "lvlTable":  [
                          {
@@ -54333,6 +54639,8 @@
     {
         "id":  "blitzle",
         "name":  "BLITZLE",
+        "kind":  "elec",
+        "isLegendary":  null,
         "minGameVersion":  "1.9.56",
         "lvlTable":  [
                          {
@@ -54730,6 +55038,8 @@
     {
         "id":  "humzee",
         "name":  "HUMZEE",
+        "kind":  "elec",
+        "isLegendary":  null,
         "minGameVersion":  null,
         "lvlTable":  [
                          {
@@ -55067,6 +55377,8 @@
     {
         "id":  "humbrine",
         "name":  "HUMBRINE",
+        "kind":  "elec",
+        "isLegendary":  null,
         "minGameVersion":  "1.6.33",
         "lvlTable":  [
                          {
@@ -55416,6 +55728,8 @@
     {
         "id":  "humbroxa",
         "name":  "HUMBROXA",
+        "kind":  "elec",
+        "isLegendary":  null,
         "minGameVersion":  "1.10.03",
         "lvlTable":  [
                          {
@@ -55769,6 +56083,8 @@
     {
         "id":  "jojolt",
         "name":  "JOJOLT",
+        "kind":  "elec",
+        "isLegendary":  null,
         "minGameVersion":  null,
         "lvlTable":  [
                          {
@@ -56106,6 +56422,8 @@
     {
         "id":  "bobolt",
         "name":  "BOBOLT",
+        "kind":  "elec",
+        "isLegendary":  null,
         "minGameVersion":  "1.6.34",
         "lvlTable":  [
                          {
@@ -56455,6 +56773,8 @@
     {
         "id":  "boltobyx",
         "name":  "BOLTOBYX",
+        "kind":  "elec",
+        "isLegendary":  null,
         "minGameVersion":  "1.10.11",
         "lvlTable":  [
                          {
@@ -56824,6 +57144,8 @@
     {
         "id":  "beebot",
         "name":  "BEEBOT",
+        "kind":  "elec",
+        "isLegendary":  null,
         "minGameVersion":  null,
         "lvlTable":  [
                          {
@@ -57161,6 +57483,8 @@
     {
         "id":  "cybuzz",
         "name":  "CYBUZZ",
+        "kind":  "elec",
+        "isLegendary":  null,
         "minGameVersion":  "1.6.34",
         "lvlTable":  [
                          {
@@ -57522,6 +57846,8 @@
     {
         "id":  "cybeenyx",
         "name":  "CYBEENYX",
+        "kind":  "elec",
+        "isLegendary":  null,
         "minGameVersion":  "1.8.88",
         "lvlTable":  [
                          {
@@ -57935,6 +58261,8 @@
     {
         "id":  "blitz",
         "name":  "BLITZ",
+        "kind":  "elec",
+        "isLegendary":  null,
         "minGameVersion":  "1.6.32",
         "lvlTable":  [
                          {
@@ -58272,6 +58600,8 @@
     {
         "id":  "blitztrix",
         "name":  "BLITZTRIX",
+        "kind":  "elec",
+        "isLegendary":  null,
         "minGameVersion":  "1.10.66",
         "lvlTable":  [
                          {
@@ -58621,6 +58951,8 @@
     {
         "id":  "blitzyran",
         "name":  "BLITZYRAN",
+        "kind":  "elec",
+        "isLegendary":  null,
         "minGameVersion":  "1.10.66",
         "lvlTable":  [
                          {
@@ -58962,6 +59294,8 @@
     {
         "id":  "buzelle",
         "name":  "BUZELLE",
+        "kind":  "elec",
+        "isLegendary":  null,
         "minGameVersion":  null,
         "lvlTable":  [
                          {
@@ -59295,6 +59629,8 @@
     {
         "id":  "blitzeer",
         "name":  "BLITZEER",
+        "kind":  "elec",
+        "isLegendary":  null,
         "minGameVersion":  "1.6.42",
         "lvlTable":  [
                          {
@@ -59656,6 +59992,8 @@
     {
         "id":  "thundeer",
         "name":  "THUNDEER",
+        "kind":  "elec",
+        "isLegendary":  null,
         "minGameVersion":  "1.6.70",
         "lvlTable":  [
                          {
@@ -60049,6 +60387,8 @@
     {
         "id":  "amuranther",
         "name":  "AMURANTHER",
+        "kind":  "dark",
+        "isLegendary":  true,
         "minGameVersion":  "1.8.83",
         "lvlTable":  [
                          {
@@ -60414,6 +60754,8 @@
     {
         "id":  "spidread",
         "name":  "SPIDREAD",
+        "kind":  "dark",
+        "isLegendary":  null,
         "minGameVersion":  null,
         "lvlTable":  [
                          {
@@ -60751,6 +61093,8 @@
     {
         "id":  "aracnoyd",
         "name":  "ARACNOYD",
+        "kind":  "dark",
+        "isLegendary":  null,
         "minGameVersion":  "1.6.35",
         "lvlTable":  [
                          {
@@ -61100,6 +61444,8 @@
     {
         "id":  "aracatyx",
         "name":  "ARACATYX",
+        "kind":  "dark",
+        "isLegendary":  null,
         "minGameVersion":  "1.9.58",
         "lvlTable":  [
                          {
@@ -61449,6 +61795,8 @@
     {
         "id":  "shadowl",
         "name":  "SHADOWL",
+        "kind":  "dark",
+        "isLegendary":  null,
         "minGameVersion":  null,
         "lvlTable":  [
                          {
@@ -61786,6 +62134,8 @@
     {
         "id":  "torney",
         "name":  "TORNEY",
+        "kind":  "dark",
+        "isLegendary":  null,
         "minGameVersion":  "1.7.82",
         "lvlTable":  [
                          {
@@ -62151,6 +62501,8 @@
     {
         "id":  "mystrix",
         "name":  "MYSTRIX",
+        "kind":  "dark",
+        "isLegendary":  null,
         "minGameVersion":  "1.9.56",
         "lvlTable":  [
                          {
@@ -62524,6 +62876,8 @@
     {
         "id":  "una",
         "name":  "UNA",
+        "kind":  "dark",
+        "isLegendary":  null,
         "minGameVersion":  "1.6.32",
         "lvlTable":  [
                          {
@@ -62861,6 +63215,8 @@
     {
         "id":  "unexus",
         "name":  "UNEXUS",
+        "kind":  "dark",
+        "isLegendary":  null,
         "minGameVersion":  "1.9.73",
         "lvlTable":  [
                          {
@@ -63214,6 +63570,8 @@
     {
         "id":  "unarodin",
         "name":  "UNARODIN",
+        "kind":  "dark",
+        "isLegendary":  null,
         "minGameVersion":  "1.9.73",
         "lvlTable":  [
                          {
@@ -63575,6 +63933,8 @@
     {
         "id":  "vampix",
         "name":  "VAMPIX",
+        "kind":  "dark",
+        "isLegendary":  null,
         "minGameVersion":  null,
         "lvlTable":  [
                          {
@@ -63912,6 +64272,8 @@
     {
         "id":  "vampixard",
         "name":  "VAMPIXARD",
+        "kind":  "dark",
+        "isLegendary":  null,
         "minGameVersion":  "1.6.48",
         "lvlTable":  [
                          {
@@ -64277,6 +64639,8 @@
     {
         "id":  "vampyzor",
         "name":  "VAMPYZOR",
+        "kind":  "dark",
+        "isLegendary":  null,
         "minGameVersion":  "1.9.64",
         "lvlTable":  [
                          {
@@ -64638,6 +65002,8 @@
     {
         "id":  "psython",
         "name":  "PSYTHON",
+        "kind":  "dark",
+        "isLegendary":  null,
         "minGameVersion":  null,
         "lvlTable":  [
                          {
@@ -64975,6 +65341,8 @@
     {
         "id":  "psyking",
         "name":  "PSYKING",
+        "kind":  "dark",
+        "isLegendary":  null,
         "minGameVersion":  "1.6.33",
         "lvlTable":  [
                          {
@@ -65336,6 +65704,8 @@
     {
         "id":  "infinissy",
         "name":  "INFINISSY",
+        "kind":  "dark",
+        "isLegendary":  null,
         "minGameVersion":  "1.6.62",
         "lvlTable":  [
                          {
@@ -65709,6 +66079,8 @@
     {
         "id":  "foxcarf",
         "name":  "FOXCARF",
+        "kind":  "dark",
+        "isLegendary":  null,
         "minGameVersion":  null,
         "lvlTable":  [
                          {
@@ -66042,6 +66414,8 @@
     {
         "id":  "forune",
         "name":  "FORUNE",
+        "kind":  "dark",
+        "isLegendary":  null,
         "minGameVersion":  "1.6.42",
         "lvlTable":  [
                          {
@@ -66415,6 +66789,8 @@
     {
         "id":  "foxunyx",
         "name":  "FOXUNYX",
+        "kind":  "dark",
+        "isLegendary":  null,
         "minGameVersion":  "1.9.56",
         "lvlTable":  [
                          {
@@ -66812,6 +67188,8 @@
     {
         "id":  "zenix_egg",
         "name":  "ZENIX EGG",
+        "kind":  "dark",
+        "isLegendary":  true,
         "minGameVersion":  "1.7.73",
         "lvlTable":  [
                          {
@@ -67105,6 +67483,8 @@
     {
         "id":  "baby_zenix",
         "name":  "BABY ZENIX",
+        "kind":  "dark",
+        "isLegendary":  true,
         "minGameVersion":  "1.7.73",
         "lvlTable":  [
                          {
@@ -67410,6 +67790,8 @@
     {
         "id":  "zenix",
         "name":  "ZENIX",
+        "kind":  "dark",
+        "isLegendary":  true,
         "minGameVersion":  null,
         "lvlTable":  [
                          {
@@ -67743,6 +68125,8 @@
     {
         "id":  "zydonyx",
         "name":  "ZYDONYX",
+        "kind":  "dark",
+        "isLegendary":  true,
         "minGameVersion":  "1.8.77",
         "lvlTable":  [
                          {
@@ -68116,6 +68500,8 @@
     {
         "id":  "zonysus",
         "name":  "ZONYSUS",
+        "kind":  "dark",
+        "isLegendary":  true,
         "minGameVersion":  "1.10.55",
         "lvlTable":  [
                          {
@@ -68469,6 +68855,8 @@
     {
         "id":  "monbaa",
         "name":  "MONBAA",
+        "kind":  "elec",
+        "isLegendary":  null,
         "minGameVersion":  "1.6.26",
         "lvlTable":  [
                          {
@@ -68806,6 +69194,8 @@
     {
         "id":  "barama",
         "name":  "BARAMA",
+        "kind":  "elec",
+        "isLegendary":  null,
         "minGameVersion":  "1.6.35",
         "lvlTable":  [
                          {
@@ -69167,6 +69557,8 @@
     {
         "id":  "ramboom",
         "name":  "RAMBOOM",
+        "kind":  "elec",
+        "isLegendary":  null,
         "minGameVersion":  "1.6.72",
         "lvlTable":  [
                          {
@@ -69560,6 +69952,8 @@
     {
         "id":  "pandinky",
         "name":  "PANDINKY",
+        "kind":  "dark",
+        "isLegendary":  null,
         "minGameVersion":  "1.6.26",
         "lvlTable":  [
                          {
@@ -69897,6 +70291,8 @@
     {
         "id":  "pandora",
         "name":  "PANDORA",
+        "kind":  "dark",
+        "isLegendary":  null,
         "minGameVersion":  "1.6.37",
         "lvlTable":  [
                          {
@@ -70262,6 +70658,8 @@
     {
         "id":  "pandeidon",
         "name":  "PANDEIDON",
+        "kind":  "dark",
+        "isLegendary":  null,
         "minGameVersion":  "1.10.07",
         "lvlTable":  [
                          {
@@ -70619,6 +71017,8 @@
     {
         "id":  "snig",
         "name":  "SNIG",
+        "kind":  "earth",
+        "isLegendary":  null,
         "minGameVersion":  "1.6.26",
         "lvlTable":  [
                          {
@@ -70956,6 +71356,8 @@
     {
         "id":  "sneg",
         "name":  "SNEG",
+        "kind":  "earth",
+        "isLegendary":  null,
         "minGameVersion":  "1.6.34",
         "lvlTable":  [
                          {
@@ -71317,6 +71719,8 @@
     {
         "id":  "snegoryx",
         "name":  "SNEGORYX",
+        "kind":  "earth",
+        "isLegendary":  null,
         "minGameVersion":  "1.8.17",
         "lvlTable":  [
                          {
@@ -71694,6 +72098,8 @@
     {
         "id":  "fengo",
         "name":  "FENGO",
+        "kind":  "fire",
+        "isLegendary":  null,
         "minGameVersion":  "1.6.26",
         "lvlTable":  [
                          {
@@ -72031,6 +72437,8 @@
     {
         "id":  "huango",
         "name":  "HUANGO",
+        "kind":  "fire",
+        "isLegendary":  null,
         "minGameVersion":  "1.6.35",
         "lvlTable":  [
                          {
@@ -72388,6 +72796,8 @@
     {
         "id":  "huanyx",
         "name":  "HUANYX",
+        "kind":  "fire",
+        "isLegendary":  null,
         "minGameVersion":  "1.9.50",
         "lvlTable":  [
                          {
@@ -72753,6 +73163,8 @@
     {
         "id":  "devish",
         "name":  "DEVISH",
+        "kind":  "dark",
+        "isLegendary":  null,
         "minGameVersion":  "1.6.26",
         "lvlTable":  [
                          {
@@ -73090,6 +73502,8 @@
     {
         "id":  "wereboar",
         "name":  "WEREBOAR",
+        "kind":  "dark",
+        "isLegendary":  null,
         "minGameVersion":  "1.6.37",
         "lvlTable":  [
                          {
@@ -73439,6 +73853,8 @@
     {
         "id":  "hellboar",
         "name":  "HELLBOAR",
+        "kind":  "dark",
+        "isLegendary":  null,
         "minGameVersion":  "1.6.72",
         "lvlTable":  [
                          {
@@ -73820,6 +74236,8 @@
     {
         "id":  "spooky",
         "name":  "SPOOKY",
+        "kind":  "dark",
+        "isLegendary":  null,
         "minGameVersion":  "1.6.72",
         "lvlTable":  [
                          {
@@ -74165,6 +74583,8 @@
     {
         "id":  "spookasaur",
         "name":  "SPOOKASAUR",
+        "kind":  "dark",
+        "isLegendary":  null,
         "minGameVersion":  "1.6.72",
         "lvlTable":  [
                          {
@@ -74510,6 +74930,8 @@
     {
         "id":  "ghumble",
         "name":  "GHUMBLE",
+        "kind":  "dark",
+        "isLegendary":  null,
         "minGameVersion":  "1.6.72",
         "lvlTable":  [
                          {
@@ -74915,6 +75337,8 @@
     {
         "id":  "shockadile",
         "name":  "SHOCKADILE",
+        "kind":  "elec",
+        "isLegendary":  null,
         "minGameVersion":  "1.6.26",
         "lvlTable":  [
                          {
@@ -75248,6 +75672,8 @@
     {
         "id":  "voltork",
         "name":  "VOLTORK",
+        "kind":  "elec",
+        "isLegendary":  null,
         "minGameVersion":  "1.7.30",
         "lvlTable":  [
                          {
@@ -75605,6 +76031,8 @@
     {
         "id":  "volteonyx",
         "name":  "VOLTEONYX",
+        "kind":  "elec",
+        "isLegendary":  null,
         "minGameVersion":  "1.7.30",
         "lvlTable":  [
                          {
@@ -75994,6 +76422,8 @@
     {
         "id":  "cappato",
         "name":  "CAPPATO",
+        "kind":  "earth",
+        "isLegendary":  null,
         "minGameVersion":  "1.8.25",
         "lvlTable":  [
                          {
@@ -76367,6 +76797,8 @@
     {
         "id":  "cappatoise",
         "name":  "CAPPATOISE",
+        "kind":  "earth",
+        "isLegendary":  null,
         "minGameVersion":  "1.8.25",
         "lvlTable":  [
                          {
@@ -76752,6 +77184,8 @@
     {
         "id":  "cappatoryx",
         "name":  "CAPPATORYX",
+        "kind":  "earth",
+        "isLegendary":  null,
         "minGameVersion":  "1.10.16",
         "lvlTable":  [
                          {
@@ -77117,6 +77551,8 @@
     {
         "id":  "dark_egg_2",
         "name":  "DARK EGG",
+        "kind":  "dark",
+        "isLegendary":  true,
         "minGameVersion":  "1.8.01",
         "lvlTable":  [
                          {
@@ -77410,6 +77846,8 @@
     {
         "id":  "baby_dark_2",
         "name":  "DARK BABY",
+        "kind":  "dark",
+        "isLegendary":  true,
         "minGameVersion":  "1.8.01",
         "lvlTable":  [
                          {
@@ -77707,6 +78145,8 @@
     {
         "id":  "ramethyst",
         "name":  "RAMETHYST",
+        "kind":  "dark",
+        "isLegendary":  true,
         "minGameVersion":  "1.6.26",
         "lvlTable":  [
                          {
@@ -78044,6 +78484,8 @@
     {
         "id":  "apatite",
         "name":  "APATITE",
+        "kind":  "dark",
+        "isLegendary":  true,
         "minGameVersion":  "1.6.37",
         "lvlTable":  [
                          {
@@ -78393,6 +78835,8 @@
     {
         "id":  "dagaryx",
         "name":  "DAGARYX",
+        "kind":  "dark",
+        "isLegendary":  true,
         "minGameVersion":  "1.10.98",
         "lvlTable":  [
                          {
@@ -78757,6 +79201,8 @@
     {
         "id":  "zomok",
         "name":  "ZOMOK",
+        "kind":  "water",
+        "isLegendary":  true,
         "minGameVersion":  "1.8.77",
         "lvlTable":  [
                          {
@@ -79106,6 +79552,8 @@
     {
         "id":  "xomox",
         "name":  "XOMOX",
+        "kind":  "water",
+        "isLegendary":  true,
         "minGameVersion":  "1.8.77",
         "lvlTable":  [
                          {
@@ -79523,6 +79971,8 @@
     {
         "id":  "zomonyx",
         "name":  "ZOMONYX",
+        "kind":  "water",
+        "isLegendary":  true,
         "minGameVersion":  "1.8.77",
         "lvlTable":  [
                          {
@@ -79968,6 +80418,8 @@
     {
         "id":  "hermes",
         "name":  "HERMES",
+        "kind":  "water",
+        "isLegendary":  null,
         "minGameVersion":  "1.6.39",
         "lvlTable":  [
                          {
@@ -80309,6 +80761,8 @@
     {
         "id":  "hermatude",
         "name":  "HERMATUDE",
+        "kind":  "water",
+        "isLegendary":  null,
         "minGameVersion":  "1.6.48",
         "lvlTable":  [
                          {
@@ -80670,6 +81124,8 @@
     {
         "id":  "kelpish",
         "name":  "KELPISH",
+        "kind":  "water",
+        "isLegendary":  null,
         "minGameVersion":  "1.6.39",
         "lvlTable":  [
                          {
@@ -81015,6 +81471,8 @@
     {
         "id":  "kelpie",
         "name":  "KELPIE",
+        "kind":  "water",
+        "isLegendary":  null,
         "minGameVersion":  "1.6.48",
         "lvlTable":  [
                          {
@@ -81376,6 +81834,8 @@
     {
         "id":  "kelpynar",
         "name":  "KELPYNAR",
+        "kind":  "water",
+        "isLegendary":  null,
         "minGameVersion":  "1.9.70",
         "lvlTable":  [
                          {
@@ -81725,6 +82185,8 @@
     {
         "id":  "orqua",
         "name":  "ORQUA",
+        "kind":  "water",
+        "isLegendary":  null,
         "minGameVersion":  "1.6.39",
         "lvlTable":  [
                          {
@@ -82070,6 +82532,8 @@
     {
         "id":  "gigawhopp",
         "name":  "GIGAWHOPP",
+        "kind":  "water",
+        "isLegendary":  null,
         "minGameVersion":  "1.6.48",
         "lvlTable":  [
                          {
@@ -82431,6 +82895,8 @@
     {
         "id":  "orquanys",
         "name":  "ORQUANYS",
+        "kind":  "water",
+        "isLegendary":  null,
         "minGameVersion":  "1.9.88",
         "lvlTable":  [
                          {
@@ -82784,6 +83250,8 @@
     {
         "id":  "soaky_popo",
         "name":  "SOAKY POPO",
+        "kind":  "water",
+        "isLegendary":  null,
         "minGameVersion":  "1.6.39",
         "lvlTable":  [
                          {
@@ -83129,6 +83597,8 @@
     {
         "id":  "octopo",
         "name":  "OCTOPO",
+        "kind":  "water",
+        "isLegendary":  null,
         "minGameVersion":  "1.6.48",
         "lvlTable":  [
                          {
@@ -83490,6 +83960,8 @@
     {
         "id":  "ocquadia",
         "name":  "OCQUADIA",
+        "kind":  "water",
+        "isLegendary":  null,
         "minGameVersion":  "1.11.06",
         "lvlTable":  [
                          {
@@ -83847,6 +84319,8 @@
     {
         "id":  "zapsnap",
         "name":  "ZAPSNAP",
+        "kind":  "elec",
+        "isLegendary":  null,
         "minGameVersion":  "1.6.56",
         "lvlTable":  [
                          {
@@ -84208,6 +84682,8 @@
     {
         "id":  "buzzsnap",
         "name":  "BUZZSNAP",
+        "kind":  "elec",
+        "isLegendary":  null,
         "minGameVersion":  "1.6.56",
         "lvlTable":  [
                          {
@@ -84581,6 +85057,8 @@
     {
         "id":  "bozzodox",
         "name":  "BOZZODOX",
+        "kind":  "elec",
+        "isLegendary":  null,
         "minGameVersion":  "1.9.87",
         "lvlTable":  [
                          {
@@ -84958,6 +85436,8 @@
     {
         "id":  "kanga",
         "name":  "KANGA",
+        "kind":  "elec",
+        "isLegendary":  null,
         "minGameVersion":  "1.6.56",
         "lvlTable":  [
                          {
@@ -85319,6 +85799,8 @@
     {
         "id":  "kangaboom",
         "name":  "KANGABOOM",
+        "kind":  "elec",
+        "isLegendary":  null,
         "minGameVersion":  "1.6.56",
         "lvlTable":  [
                          {
@@ -85692,6 +86174,8 @@
     {
         "id":  "kangakyk",
         "name":  "KANGAKYK",
+        "kind":  "elec",
+        "isLegendary":  null,
         "minGameVersion":  "1.9.52",
         "lvlTable":  [
                          {
@@ -86045,6 +86529,8 @@
     {
         "id":  "jolty_popo",
         "name":  "JOLTY POPO",
+        "kind":  "elec",
+        "isLegendary":  null,
         "minGameVersion":  "1.6.56",
         "lvlTable":  [
                          {
@@ -86394,6 +86880,8 @@
     {
         "id":  "octojolt",
         "name":  "OCTOJOLT",
+        "kind":  "elec",
+        "isLegendary":  null,
         "minGameVersion":  "1.6.56",
         "lvlTable":  [
                          {
@@ -86755,6 +87243,8 @@
     {
         "id":  "ocjolton",
         "name":  "OCJOLTON",
+        "kind":  "elec",
+        "isLegendary":  null,
         "minGameVersion":  "1.10.39",
         "lvlTable":  [
                          {
@@ -87108,6 +87598,8 @@
     {
         "id":  "electric_egg",
         "name":  "ELECTRIC EGG",
+        "kind":  "elec",
+        "isLegendary":  true,
         "minGameVersion":  "1.8.01",
         "lvlTable":  [
                          {
@@ -87401,6 +87893,8 @@
     {
         "id":  "baby_electric",
         "name":  "KITINE BABY",
+        "kind":  "elec",
+        "isLegendary":  true,
         "minGameVersion":  "1.8.01",
         "lvlTable":  [
                          {
@@ -87698,6 +88192,8 @@
     {
         "id":  "kitine",
         "name":  "KITINE",
+        "kind":  "elec",
+        "isLegendary":  true,
         "minGameVersion":  "1.6.56",
         "lvlTable":  [
                          {
@@ -88067,6 +88563,8 @@
     {
         "id":  "peridox",
         "name":  "PERIDOX",
+        "kind":  "elec",
+        "isLegendary":  true,
         "minGameVersion":  "1.8.77",
         "lvlTable":  [
                          {
@@ -88456,6 +88954,8 @@
     {
         "id":  "kytydox",
         "name":  "KYTYDOX",
+        "kind":  "elec",
+        "isLegendary":  true,
         "minGameVersion":  "1.10.70",
         "lvlTable":  [
                          {
@@ -88824,6 +89324,8 @@
     {
         "id":  "scarykin",
         "name":  "SCARYKIN",
+        "kind":  "fire",
+        "isLegendary":  true,
         "minGameVersion":  "1.10.49",
         "lvlTable":  [
                          {
@@ -89189,6 +89691,8 @@
     {
         "id":  "boarcupino",
         "name":  "BOARCUPINO",
+        "kind":  "dark",
+        "isLegendary":  null,
         "minGameVersion":  "1.7.16",
         "lvlTable":  [
                          {
@@ -89570,6 +90074,8 @@
     {
         "id":  "boarcuzyx",
         "name":  "BOARCUZYX",
+        "kind":  "dark",
+        "isLegendary":  null,
         "minGameVersion":  "1.8.77",
         "lvlTable":  [
                          {
@@ -89979,6 +90485,8 @@
     {
         "id":  "boarcudon",
         "name":  "BOARCUDON",
+        "kind":  "dark",
+        "isLegendary":  null,
         "minGameVersion":  "1.10.28",
         "lvlTable":  [
                          {
@@ -90392,6 +90900,8 @@
     {
         "id":  "scarabyx",
         "name":  "SCARABYX",
+        "kind":  "earth",
+        "isLegendary":  null,
         "minGameVersion":  "1.7.16",
         "lvlTable":  [
                          {
@@ -90789,6 +91299,8 @@
     {
         "id":  "barabyx",
         "name":  "BARABYX",
+        "kind":  "earth",
+        "isLegendary":  null,
         "minGameVersion":  "1.8.77",
         "lvlTable":  [
                          {
@@ -91198,6 +91710,8 @@
     {
         "id":  "scarbydox",
         "name":  "SCARBYDOX",
+        "kind":  "earth",
+        "isLegendary":  null,
         "minGameVersion":  "1.10.33",
         "lvlTable":  [
                          {
@@ -91623,6 +92137,8 @@
     {
         "id":  "horzaryx",
         "name":  "HORZARYX",
+        "kind":  "fire",
+        "isLegendary":  true,
         "minGameVersion":  "1.11.20",
         "lvlTable":  [
                          {
@@ -92038,6 +92554,8 @@
     {
         "id":  "draxygus",
         "name":  "DRAXYGUS",
+        "kind":  "fire",
+        "isLegendary":  true,
         "minGameVersion":  "1.9.59",
         "lvlTable":  [
                          {
@@ -92387,6 +92905,8 @@
     {
         "id":  "visi",
         "name":  "VISI",
+        "kind":  "elec",
+        "isLegendary":  true,
         "minGameVersion":  "1.11.19",
         "lvlTable":  [
                          {
@@ -92785,6 +93305,8 @@
     {
         "id":  "darkdragonegg",
         "name":  "ERAXAD EGG",
+        "kind":  "dark",
+        "isLegendary":  true,
         "minGameVersion":  "1.7.50",
         "lvlTable":  [
                          {
@@ -93042,6 +93564,8 @@
     {
         "id":  "eraxad",
         "name":  "ERAXAD",
+        "kind":  "dark",
+        "isLegendary":  true,
         "minGameVersion":  "1.7.50",
         "lvlTable":  [
                          {
@@ -93311,6 +93835,8 @@
     {
         "id":  "eraxado",
         "name":  "ERAXADO",
+        "kind":  "dark",
+        "isLegendary":  true,
         "minGameVersion":  "1.7.50",
         "lvlTable":  [
                          {
@@ -93584,6 +94110,8 @@
     {
         "id":  "erasodys",
         "name":  "ERASODYS",
+        "kind":  "dark",
+        "isLegendary":  true,
         "minGameVersion":  "1.7.50",
         "lvlTable":  [
                          {
@@ -93869,6 +94397,8 @@
     {
         "id":  "eraseon",
         "name":  "ERASEON",
+        "kind":  "dark",
+        "isLegendary":  true,
         "minGameVersion":  "1.8.86",
         "lvlTable":  [
                          {
@@ -94234,6 +94764,8 @@
     {
         "id":  "tuffdar",
         "name":  "TUFFDAR",
+        "kind":  "dark",
+        "isLegendary":  null,
         "minGameVersion":  "1.10.66",
         "lvlTable":  [
                          {
@@ -94551,6 +95083,8 @@
     {
         "id":  "jubidaro",
         "name":  "JUBIDARO",
+        "kind":  "dark",
+        "isLegendary":  null,
         "minGameVersion":  "1.10.66",
         "lvlTable":  [
                          {
@@ -94876,6 +95410,8 @@
     {
         "id":  "jubidarox",
         "name":  "JUBIDAROX",
+        "kind":  "dark",
+        "isLegendary":  null,
         "minGameVersion":  "1.10.66",
         "lvlTable":  [
                          {
@@ -95213,6 +95749,8 @@
     {
         "id":  "darkunera",
         "name":  "DARKUNERA",
+        "kind":  "dark",
+        "isLegendary":  null,
         "minGameVersion":  "1.10.73",
         "lvlTable":  [
                          {
@@ -95530,6 +96068,8 @@
     {
         "id":  "darkunaryx",
         "name":  "DARKUNARYX",
+        "kind":  "dark",
+        "isLegendary":  null,
         "minGameVersion":  "1.10.73",
         "lvlTable":  [
                          {
@@ -95867,6 +96407,8 @@
     {
         "id":  "anubolt",
         "name":  "ANUBOLT",
+        "kind":  "elec",
+        "isLegendary":  true,
         "minGameVersion":  "1.8.99",
         "lvlTable":  [
                          {
@@ -96296,6 +96838,8 @@
     {
         "id":  "soruween",
         "name":  "SORUWEEN",
+        "kind":  "elec",
+        "isLegendary":  true,
         "minGameVersion":  "1.10.52",
         "lvlTable":  [
                          {
@@ -96653,6 +97197,8 @@
     {
         "id":  "tholanyx",
         "name":  "THOLANYX",
+        "kind":  "elec",
+        "isLegendary":  true,
         "minGameVersion":  "1.8.99",
         "lvlTable":  [
                          {
@@ -97030,6 +97576,8 @@
     {
         "id":  "jaxaguar",
         "name":  "JAXAGUAR",
+        "kind":  "elec",
+        "isLegendary":  true,
         "minGameVersion":  "1.8.77",
         "lvlTable":  [
                          {
@@ -97415,6 +97963,8 @@
     {
         "id":  "tuffelc",
         "name":  "TUFFELC",
+        "kind":  "elec",
+        "isLegendary":  null,
         "minGameVersion":  "1.10.62",
         "lvlTable":  [
                          {
@@ -97732,6 +98282,8 @@
     {
         "id":  "jubivolt",
         "name":  "JUBIVOLT",
+        "kind":  "elec",
+        "isLegendary":  null,
         "minGameVersion":  "1.10.62",
         "lvlTable":  [
                          {
@@ -98057,6 +98609,8 @@
     {
         "id":  "jubivoltyx",
         "name":  "JUBIVOLTYX",
+        "kind":  "elec",
+        "isLegendary":  null,
         "minGameVersion":  "1.10.62",
         "lvlTable":  [
                          {
@@ -98406,6 +98960,8 @@
     {
         "id":  "evoltonera",
         "name":  "EVOLTONERA",
+        "kind":  "elec",
+        "isLegendary":  null,
         "minGameVersion":  "1.10.73",
         "lvlTable":  [
                          {
@@ -98723,6 +99279,8 @@
     {
         "id":  "evoltonaryx",
         "name":  "EVOLTONARYX",
+        "kind":  "elec",
+        "isLegendary":  null,
         "minGameVersion":  "1.10.73",
         "lvlTable":  [
                          {
@@ -99068,6 +99626,8 @@
     {
         "id":  "tortunk",
         "name":  "TORTUNK",
+        "kind":  "earth",
+        "isLegendary":  true,
         "minGameVersion":  "1.8.78",
         "lvlTable":  [
                          {
@@ -99445,6 +100005,8 @@
     {
         "id":  "spikeolyx",
         "name":  "SPIKEOLYX",
+        "kind":  "earth",
+        "isLegendary":  true,
         "minGameVersion":  "1.8.77",
         "lvlTable":  [
                          {
@@ -99814,6 +100376,8 @@
     {
         "id":  "earthadera",
         "name":  "EARTHADERA",
+        "kind":  "earth",
+        "isLegendary":  null,
         "minGameVersion":  "1.8.14",
         "lvlTable":  [
                          {
@@ -100171,6 +100735,8 @@
     {
         "id":  "eartharyx",
         "name":  "EARTHARYX",
+        "kind":  "earth",
+        "isLegendary":  null,
         "minGameVersion":  "1.10.40",
         "lvlTable":  [
                          {
@@ -100548,6 +101114,8 @@
     {
         "id":  "aqonera",
         "name":  "AQONERA",
+        "kind":  "water",
+        "isLegendary":  null,
         "minGameVersion":  "1.10.40",
         "lvlTable":  [
                          {
@@ -100921,6 +101489,8 @@
     {
         "id":  "aqonaryx",
         "name":  "AQONARYX",
+        "kind":  "water",
+        "isLegendary":  null,
         "minGameVersion":  "1.10.40",
         "lvlTable":  [
                          {
@@ -101322,6 +101892,8 @@
     {
         "id":  "sharkonyx",
         "name":  "SHARKONYX",
+        "kind":  "water",
+        "isLegendary":  true,
         "minGameVersion":  "1.11.11",
         "lvlTable":  [
                          {
@@ -101703,6 +102275,8 @@
     {
         "id":  "tuffwata",
         "name":  "TUFFWATA",
+        "kind":  "water",
+        "isLegendary":  null,
         "minGameVersion":  "1.10.45",
         "lvlTable":  [
                          {
@@ -102064,6 +102638,8 @@
     {
         "id":  "jubidrip",
         "name":  "JUBIDRIP",
+        "kind":  "water",
+        "isLegendary":  null,
         "minGameVersion":  "1.7.37",
         "lvlTable":  [
                          {
@@ -102409,6 +102985,8 @@
     {
         "id":  "jubinyx",
         "name":  "JUBINYX",
+        "kind":  "water",
+        "isLegendary":  null,
         "minGameVersion":  "1.8.77",
         "lvlTable":  [
                          {
@@ -102766,6 +103344,8 @@
     {
         "id":  "diamonddragonegg",
         "name":  "DIAMOND EGG",
+        "kind":  "diamond",
+        "isLegendary":  true,
         "minGameVersion":  "1.7.45",
         "lvlTable":  [
                          {
@@ -103067,6 +103647,8 @@
     {
         "id":  "tyxad",
         "name":  "TYXAD",
+        "kind":  "diamond",
+        "isLegendary":  true,
         "minGameVersion":  "1.7.45",
         "lvlTable":  [
                          {
@@ -103388,6 +103970,8 @@
     {
         "id":  "tyxado",
         "name":  "TYXADO",
+        "kind":  "diamond",
+        "isLegendary":  true,
         "minGameVersion":  "1.7.45",
         "lvlTable":  [
                          {
@@ -103725,6 +104309,8 @@
     {
         "id":  "tyxadys",
         "name":  "TYXADYS",
+        "kind":  "diamond",
+        "isLegendary":  true,
         "minGameVersion":  "1.7.45",
         "lvlTable":  [
                          {
@@ -104070,6 +104656,8 @@
     {
         "id":  "tydonyx",
         "name":  "TYDONYX",
+        "kind":  "diamond",
+        "isLegendary":  true,
         "minGameVersion":  "1.10.93",
         "lvlTable":  [
                          {
@@ -104429,6 +105017,8 @@
     {
         "id":  "surfant_diamond",
         "name":  "SURFANT",
+        "kind":  "diamond",
+        "isLegendary":  null,
         "minGameVersion":  "1.7.57",
         "lvlTable":  [
                          {
@@ -104790,6 +105380,8 @@
     {
         "id":  "hydragon_diamond",
         "name":  "HYDRAGON",
+        "kind":  "diamond",
+        "isLegendary":  null,
         "minGameVersion":  "1.9.56",
         "lvlTable":  [
                          {
@@ -105163,6 +105755,8 @@
     {
         "id":  "dropkola_diamond",
         "name":  "DROPKOLA",
+        "kind":  "diamond",
+        "isLegendary":  null,
         "minGameVersion":  "1.7.59",
         "lvlTable":  [
                          {
@@ -105516,6 +106110,8 @@
     {
         "id":  "dropkolyx_diamond",
         "name":  "DROPKOLYX",
+        "kind":  "diamond",
+        "isLegendary":  null,
         "minGameVersion":  "1.7.59",
         "lvlTable":  [
                          {
@@ -105881,6 +106477,8 @@
     {
         "id":  "monbaa_diamond",
         "name":  "MONBAA",
+        "kind":  "diamond",
+        "isLegendary":  null,
         "minGameVersion":  "1.7.60",
         "lvlTable":  [
                          {
@@ -106222,6 +106820,8 @@
     {
         "id":  "barama_diamond",
         "name":  "BARAMA",
+        "kind":  "diamond",
+        "isLegendary":  null,
         "minGameVersion":  "1.7.60",
         "lvlTable":  [
                          {
@@ -106579,6 +107179,8 @@
     {
         "id":  "ramboom_diamond",
         "name":  "RAMBOOM",
+        "kind":  "diamond",
+        "isLegendary":  null,
         "minGameVersion":  "1.9.56",
         "lvlTable":  [
                          {
@@ -106944,6 +107546,8 @@
     {
         "id":  "rabbityx",
         "name":  "RABBITYX",
+        "kind":  "diamond",
+        "isLegendary":  true,
         "minGameVersion":  "1.7.65",
         "lvlTable":  [
                          {
@@ -107309,6 +107913,8 @@
     {
         "id":  "rhinodys",
         "name":  "RHINODYS",
+        "kind":  "diamond",
+        "isLegendary":  true,
         "minGameVersion":  "1.11.21",
         "lvlTable":  [
                          {
@@ -107714,6 +108320,8 @@
     {
         "id":  "daimonera",
         "name":  "DAIMONERA",
+        "kind":  "diamond",
+        "isLegendary":  null,
         "minGameVersion":  "1.10.40",
         "lvlTable":  [
                          {
@@ -108051,6 +108659,8 @@
     {
         "id":  "daimoryx",
         "name":  "DAIMORYX",
+        "kind":  "diamond",
+        "isLegendary":  null,
         "minGameVersion":  "1.10.40",
         "lvlTable":  [
                          {
@@ -108404,6 +109014,8 @@
     {
         "id":  "elydjin",
         "name":  "ELYDJIN",
+        "kind":  "diamond",
+        "isLegendary":  null,
         "minGameVersion":  "1.10.53",
         "lvlTable":  [
                          {
@@ -108765,6 +109377,8 @@
     {
         "id":  "golddragonegg",
         "name":  "GOLDEN EGG",
+        "kind":  "gold",
+        "isLegendary":  true,
         "minGameVersion":  "1.7.84",
         "lvlTable":  [
                          {
@@ -109066,6 +109680,8 @@
     {
         "id":  "goldaby",
         "name":  "GOLDABY",
+        "kind":  "gold",
+        "isLegendary":  true,
         "minGameVersion":  "1.7.84",
         "lvlTable":  [
                          {
@@ -109391,6 +110007,8 @@
     {
         "id":  "goxabyx",
         "name":  "GOXABYX",
+        "kind":  "gold",
+        "isLegendary":  true,
         "minGameVersion":  "1.7.84",
         "lvlTable":  [
                          {
@@ -109728,6 +110346,8 @@
     {
         "id":  "goxydys",
         "name":  "GOXYDYS",
+        "kind":  "gold",
+        "isLegendary":  true,
         "minGameVersion":  "1.7.84",
         "lvlTable":  [
                          {
@@ -110081,6 +110701,8 @@
     {
         "id":  "goldonyx",
         "name":  "GOLDONYX",
+        "kind":  "gold",
+        "isLegendary":  true,
         "minGameVersion":  "1.10.92",
         "lvlTable":  [
                          {
@@ -110460,6 +111082,8 @@
     {
         "id":  "fenixaro",
         "name":  "FENIXARO",
+        "kind":  "gold",
+        "isLegendary":  true,
         "minGameVersion":  "1.8.99",
         "lvlTable":  [
                          {
@@ -110825,6 +111449,8 @@
     {
         "id":  "tyrexar",
         "name":  "TYREXAR",
+        "kind":  "gold",
+        "isLegendary":  true,
         "minGameVersion":  "1.9.45",
         "lvlTable":  [
                          {
@@ -111194,6 +111820,8 @@
     {
         "id":  "tyceratox",
         "name":  "TYCERATOX",
+        "kind":  "gold",
+        "isLegendary":  true,
         "minGameVersion":  "1.9.66",
         "lvlTable":  [
                          {
@@ -111563,6 +112191,8 @@
     {
         "id":  "pterodanox",
         "name":  "PTERODANOX",
+        "kind":  "gold",
+        "isLegendary":  true,
         "minGameVersion":  "1.9.78",
         "lvlTable":  [
                          {
@@ -111924,6 +112554,8 @@
     {
         "id":  "knightanyx",
         "name":  "KNIGHTANYX",
+        "kind":  "gold",
+        "isLegendary":  true,
         "minGameVersion":  "1.9.85",
         "lvlTable":  [
                          {
@@ -112281,6 +112913,8 @@
     {
         "id":  "cobragora",
         "name":  "COBRAGORA",
+        "kind":  "gold",
+        "isLegendary":  true,
         "minGameVersion":  "1.10.44",
         "lvlTable":  [
                          {
@@ -112638,6 +113272,8 @@
     {
         "id":  "golunera",
         "name":  "GOLUNERA",
+        "kind":  "gold",
+        "isLegendary":  null,
         "minGameVersion":  "1.10.57",
         "lvlTable":  [
                          {
@@ -112971,6 +113607,8 @@
     {
         "id":  "golunaryx",
         "name":  "GOLUNARYX",
+        "kind":  "gold",
+        "isLegendary":  null,
         "minGameVersion":  "1.10.57",
         "lvlTable":  [
                          {
@@ -113316,6 +113954,8 @@
     {
         "id":  "tuffspira",
         "name":  "TUFFSPIRA",
+        "kind":  "spirit",
+        "isLegendary":  null,
         "minGameVersion":  "1.10.80",
         "lvlTable":  [
                          {
@@ -113653,6 +114293,8 @@
     {
         "id":  "jubispira",
         "name":  "JUBISPIRA",
+        "kind":  "spirit",
+        "isLegendary":  null,
         "minGameVersion":  "1.10.80",
         "lvlTable":  [
                          {
@@ -114006,6 +114648,8 @@
     {
         "id":  "jubispirax",
         "name":  "JUBISPIRAX",
+        "kind":  "spirit",
+        "isLegendary":  null,
         "minGameVersion":  "1.10.80",
         "lvlTable":  [
                          {
@@ -114359,6 +115003,8 @@
     {
         "id":  "wolfkahu",
         "name":  "WOLFKAHU",
+        "kind":  "spirit",
+        "isLegendary":  null,
         "minGameVersion":  "1.10.83",
         "lvlTable":  [
                          {
@@ -114708,6 +115354,8 @@
     {
         "id":  "anglobine",
         "name":  "ANGLOBINE",
+        "kind":  "spirit",
+        "isLegendary":  null,
         "minGameVersion":  "1.10.85",
         "lvlTable":  [
                          {
@@ -115061,6 +115709,8 @@
     {
         "id":  "skyvioru",
         "name":  "SKYVIORU",
+        "kind":  "spirit",
+        "isLegendary":  true,
         "minGameVersion":  "1.10.85",
         "lvlTable":  [
                          {
@@ -115422,6 +116072,8 @@
     {
         "id":  "uryndur",
         "name":  "URYNDUR",
+        "kind":  "spirit",
+        "isLegendary":  true,
         "minGameVersion":  "1.10.87",
         "lvlTable":  [
                          {
@@ -115783,6 +116435,8 @@
     {
         "id":  "chyroax",
         "name":  "CHYROAX",
+        "kind":  "spirit",
+        "isLegendary":  null,
         "minGameVersion":  "1.10.88",
         "lvlTable":  [
                          {
@@ -116132,6 +116786,8 @@
     {
         "id":  "scorvenox",
         "name":  "SCORVENOX",
+        "kind":  "spirit",
+        "isLegendary":  null,
         "minGameVersion":  "1.10.90",
         "lvlTable":  [
                          {
@@ -116481,6 +117137,8 @@
     {
         "id":  "axolotix",
         "name":  "AXOLOTIX",
+        "kind":  "spirit",
+        "isLegendary":  null,
         "minGameVersion":  "1.10.92",
         "lvlTable":  [
                          {
@@ -116830,6 +117488,8 @@
     {
         "id":  "sihorico",
         "name":  "SIHORICO",
+        "kind":  "spirit",
+        "isLegendary":  null,
         "minGameVersion":  "1.10.95",
         "lvlTable":  [
                          {
@@ -117185,6 +117845,8 @@
     {
         "id":  "yacatoma",
         "name":  "YACATOMA",
+        "kind":  "spirit",
+        "isLegendary":  null,
         "minGameVersion":  "1.10.97",
         "lvlTable":  [
                          {
@@ -117553,6 +118215,8 @@
     {
         "id":  "ghonsera",
         "name":  "GHONSERA",
+        "kind":  "spirit",
+        "isLegendary":  null,
         "minGameVersion":  "1.11.01",
         "lvlTable":  [
                          {
@@ -117894,6 +118558,8 @@
     {
         "id":  "ghonsaryx",
         "name":  "GHONSARYX",
+        "kind":  "spirit",
+        "isLegendary":  null,
         "minGameVersion":  "1.11.01",
         "lvlTable":  [
                          {
