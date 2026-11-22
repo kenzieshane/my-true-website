@@ -4,26 +4,42 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
     <title>Page not found &mdash; KenzieShane Media</title>
     <script>
         (function () {
             var path = location.pathname;
+
             if (/\/about\.html$/i.test(path)) {
                 location.replace(path.replace(/about\.html$/i, 'about.html') + location.search + location.hash);
                 return;
             }
+
             var base = '/';
             if (/\.github\.io$/i.test(location.hostname)) {
-                var seg = location.pathname.split('/').filter(Boolean)[0];
+                var seg = path.split('/').filter(Boolean)[0];
                 if (seg) base = '/' + seg + '/';
+            } else if (path.indexOf('/my-true-website/') === 0) {
+                base = '/my-true-website/';
             }
+
+            window.__siteBase = base;
+
             var baseEl = document.createElement('base');
             baseEl.href = base;
             document.head.appendChild(baseEl);
+
+            var icon = document.createElement('link');
+            icon.rel = 'shortcut icon';
+            icon.type = 'image/x-icon';
+            icon.href = base + 'favicon.ico';
+            document.head.appendChild(icon);
+
+            var css = document.createElement('link');
+            css.rel = 'stylesheet';
+            css.href = base + 'index.css';
+            document.head.appendChild(css);
         })();
     </script>
-    <link rel="stylesheet" href="/index.css">
     <style>
         .error-code {
             display: inline-block;
@@ -50,7 +66,7 @@
     <header>
         <div class="logo">
             <a href="index.html">
-                <img height="auto" width="50" src="1.png" alt="KenzieShane Media Logo">
+                <img id="header-logo" height="auto" width="50" alt="KenzieShane Media Logo">
                 <h1>KenzieShane<span>Media</span></h1>
             </a>
             <p id="remove-when-small"></p>
@@ -75,7 +91,7 @@
             <a href="index.html" class="btn-cta">Back to homepage</a>
         </div>
         <div class="hero-image">
-            <img height="200" src="./1.png" alt="KenzieShane Media Logo">
+            <img id="error-logo" height="200" alt="KenzieShane Media Logo">
         </div>
         <div class="clear"></div>
     </section>
@@ -115,7 +131,30 @@ Background Image by <a href="https://pixabay.com/users/chenspec-7784448/?utm_sou
 
 </div>
 
-<script src="responsive.js"></script>
+<script>
+    (function () {
+        var base = window.__siteBase;
+        if (!base) return;
+
+        var logo = document.getElementById('error-logo');
+        if (logo) {
+            logo.src = base + '1.png';
+        }
+
+        var headerLogo = document.getElementById('header-logo');
+        if (headerLogo) {
+            headerLogo.src = base + '1.png';
+        }
+
+        var links = document.querySelectorAll('a[href]');
+        for (var i = 0; i < links.length; i++) {
+            var href = links[i].getAttribute('href');
+            if (href && href.charAt(0) !== '/' && href.charAt(0) !== '#' && !/^[a-z][a-z0-9+.-]*:/i.test(href)) {
+                links[i].setAttribute('href', base + href);
+            }
+        }
+    })();
+</script>
 
 </body>
 </html>
